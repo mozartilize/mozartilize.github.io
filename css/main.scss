@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -26,6 +26,8 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$header_height: 145px;
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -36,4 +38,72 @@ $on-laptop:        800px;
 // }
 
 // Import partials from the `minima` theme.
-@import "minima";
+// @import "minima";
+
+tt, code, kbd, samp, pre {
+  font-family: 'Fira Code Retina', monospace;
+}
+
+pre {
+  margin: 0;
+}
+
+header{
+  background-color: black;
+  position: relative;
+  height: $header_height;
+  margin-bottom: 85px;
+  #title {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+  }
+  .site-brand {
+    position: relative;
+    text-align: center;
+    img {
+      border-radius: 100%;
+    }
+  }
+}
+
+nav {
+  text-align: center;
+  padding: 20px 0;
+  span {
+    font-family: 'Galada', cursive;
+    color: #840705;
+    a {
+      color: inherit;
+      &:hover {
+        color: #e61610;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+.post-list {
+  list-style-type: none;
+}
+
+.post-title {
+  font-family: 'Fira Sans', sans-serif;
+  .publish-date {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: lighter;
+  }
+}
+
+.post-preview {
+  p, a {
+    font-family: 'Fira Sans', sans-serif;
+  }
+}
