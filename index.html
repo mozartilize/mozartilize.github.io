@@ -4,25 +4,39 @@ layout: base
 
 <div class="home">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <h2 class="post-title">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-          <span class="post-meta publish-date">on {{ post.date | date: "%b %-d, %Y" }}</span>
-        </h2>
-        <div class="post-preview">
-          {% if post.content contains '<!-- more -->' %}
-              {{ post.content | split:'<!-- more -->' | first }}
-          {% else %}
-              {{ post.excerpt }}
-          {% endif %}
-          <p>
-            <a href="{{ post.url }}">Read more...</a>
-          </p>
+  <div class="post-list">
+    {% if paginator.posts.length > 0 %}
+      {% for post in paginator.posts %}
+        <div class="post">
+          <h2 class="post-title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+            <span class="post-meta publish-date">on {{ post.date | date: "%b %-d, %Y" }}</span>
+          </h2>
+          <div class="post-preview">
+            {% if post.content contains '<!-- more -->' %}
+                {{ post.content | split:'<!-- more -->' | first }}
+            {% else %}
+                {{ post.excerpt }}
+            {% endif %}
+            <p>
+              <a href="{{ post.url }}">Read more...</a>
+            </p>
+          </div>
         </div>
-      </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    {% else %}
+      <h2>There is no post to be displayed.</h2>
+    {% endif %}
+  </div>
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="btn previous"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="btn next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    {% endif %}
+  </div>
+  <div class="pagination-clear"></div>
 
 </div>

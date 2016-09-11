@@ -18,13 +18,15 @@ title: Wild, Free, Foolish
 description: > # this means to ignore newlines until "baseurl:"
   I am a programmer who is open-source addicted
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "arshavindn.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  arshavindn
+url: "https://arshavindn.github.io" # the base hostname & protocol for your site
+
+gems:
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
-paginate: 10
+# paginate_path: "/page:num/"
+paginate: 5
 highlighter: pygments
 
 timezone: Asia/Ho_Chi_Minh

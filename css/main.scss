@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
+$base-font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -40,8 +40,20 @@ $header_height: 165px;
 // Import partials from the `minima` theme.
 // @import "minima";
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font-family;
+}
+
 tt, code, kbd, samp, pre {
   font-family: 'Fira Code Retina', monospace;
+}
+
+a {
+  color: black;
+  &:hover {
+    color: grey;
+    text-decoration: none;
+  }
 }
 
 header#page-header{
@@ -87,7 +99,7 @@ nav {
 }
 
 .wrapper {
-  width: 60%;
+  width: 50%;
   margin: auto;
 }
 
@@ -151,6 +163,31 @@ footer#page-footer {
       }
     }
   }
+}
+
+.pagination {
+  display: block;
+  .btn {
+    background-color: black;
+    border-radius: 0;
+    box-shadow: 0 2px 0 0 grey;
+    color: white;
+    font-family: 'Fira Code Retina', 'Fira Mono', monospace;
+    i {
+      font-size: 20px;
+      vertical-align: text-bottom;
+    }
+  }
+  .next {
+    float: right;
+  }
+  .previous {
+    float: left;
+  }
+}
+
+.pagination-clear {
+  clear: both;
 }
 
 @import 'syntax-highlighting';
