@@ -17,7 +17,9 @@ layout: base
           {% else %}
               {{ post.excerpt }}
           {% endif %}
-          <a href="{{ post.url }}">Read more...</a>
+          <p>
+            <a href="{{ post.url }}">Read more...</a>
+          </p>
         </div>
       </li>
     {% endfor %}

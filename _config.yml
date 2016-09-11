@@ -24,7 +24,7 @@ github_username:  arshavindn
 
 # Build settings
 markdown: kramdown
-# theme: minima
+paginate: 10
 highlighter: pygments
 
 timezone: Asia/Ho_Chi_Minh

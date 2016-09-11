@@ -26,7 +26,7 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-$header_height: 145px;
+$header_height: 165px;
 
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
@@ -44,16 +44,13 @@ tt, code, kbd, samp, pre {
   font-family: 'Fira Code Retina', monospace;
 }
 
-pre {
-  margin: 0;
-}
-
-header{
+header#page-header{
   background-color: black;
   position: relative;
   height: $header_height;
-  margin-bottom: 85px;
+  margin-bottom: 105px;
   #title {
+    padding: 10px;
     font-family: 'Lobster', cursive;
     font-size: 3em;
     text-align: center;
@@ -84,6 +81,11 @@ nav {
   }
 }
 
+.page-content {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 .wrapper {
   width: 60%;
   margin: auto;
@@ -102,8 +104,53 @@ nav {
   }
 }
 
-.post-preview {
+.post-preview, .post-content {
   p, a {
     font-family: 'Fira Sans', sans-serif;
   }
 }
+
+footer#page-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  .wrapper {
+    text-align: center;
+    > div {
+      vertical-align: middle;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+    }
+    .info {
+      display: inline-block;
+      ul {
+        padding: 10px 0 0 0;
+        margin: 0;
+        text-align: center;
+        li {
+          display: inline;
+          padding: 5px;
+          i {
+            font-size: 18px;
+            color: white;
+          }
+        }
+      }
+    }
+    .intro-lines {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 10px;
+      text-align: left;
+      p {
+        font-family: 'Fira Code Retina', 'Fira Mono', monospace;
+        color: white;
+      }
+    }
+  }
+}
+
+@import 'syntax-highlighting';
