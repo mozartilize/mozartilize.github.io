@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -108,7 +108,7 @@ nav {
 }
 
 .post-title {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   .publish-date {
     font-family: inherit;
     font-size: 18px;
@@ -118,7 +118,7 @@ nav {
 
 .post-preview, .post-content {
   p, a {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
