@@ -8,10 +8,10 @@ layout: base
     {% if paginator.posts %}
       {% for post in paginator.posts %}
         <div class="post">
-          <h2 class="post-title">
+          <h1 class="post-title">
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
             <span class="post-meta publish-date">on {{ post.date | date: "%b %-d, %Y" }}</span>
-          </h2>
+          </h1>
           <div class="post-preview">
             {% if post.content contains '<!-- more -->' %}
                 {{ post.content | split:'<!-- more -->' | first }}

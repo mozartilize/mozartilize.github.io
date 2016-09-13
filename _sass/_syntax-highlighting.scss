@@ -21,6 +21,9 @@ figure.highlight {
       padding: 10px 10px;
       border: 0;
       line-height: 1.6em;
+      code {
+        white-space: pre;
+      }
     }
 
     table td {
