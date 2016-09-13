@@ -130,17 +130,17 @@ Với ruby chúng ta có 2 version manager đó là `rvm` và `rbenv`. Nhưng v�
     ```
     Tương tự đối với `local` và `global`.
 
-### Quản lý thư viện bên thứ ba với `rbenv-gemsets`
+### Quản lý thư viện bên thứ ba với `rbenv-gemset`
 
 `rbenv` thật sự vẫn chưa đủ khi các dự án khác nhau dùng chung một phiên bản ruby nhưng yêu cầu các thư viện (gem) khác nhau.
-Plugin `rbenv-gemsets` giải quyết vấn đề này một cách đơn giản.
+Plugin `rbenv-gemset` giải quyết vấn đề này một cách đơn giản.
 
 Trong mỗi thư mục của mỗi dự án, chạy lệnh:
 
 ```bash
 $ rbenv gemset init
 ```
-`rbenv-gemsets` sẽ tạo một file `.rbenv-gemsets`. Khi đó, mỗi lần install một gem với `gem install package-sample`, gem này sẽ thuộc về bộ gem chỉ dành cho dự án này.
+`rbenv-gemset` sẽ tạo một file `.rbenv-gemsets`. Khi đó, mỗi lần install một gem với `gem install package-sample`, gem này sẽ thuộc về bộ gem chỉ dành cho dự án này.
 
 #### Kế thừa gemset
 
