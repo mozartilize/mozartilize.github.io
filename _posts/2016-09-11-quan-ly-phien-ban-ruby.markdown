@@ -119,7 +119,7 @@ Với ruby chúng ta có 2 version manager đó là `rvm` và `rbenv`. Nhưng v�
     ```bash
     $ rbenv shell 2.2.1
     ```
-    Thiết đặt phiên ruby bản cho shell hiện tại. Nó khi đè phiên bản ruby được thiết đặt bới `local` và `global`.
+    Thiết đặt phiên ruby bản cho shell hiện tại. Nó ghi đè phiên bản ruby được thiết đặt bới `local` và `global`.
 
     ![rbenv shell](/images/posts/2016-09-11-quan-ly-phien-ban-ruby/rbenv-shell.png)
 
