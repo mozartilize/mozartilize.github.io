@@ -1,4 +1,5 @@
-{% if ((page.comments == null or page.comments) or site.comments) %}
+{% debug %}
+{% if page.comments == null or page.comments or site.comments %}
   {% if site.url %}
     {% assign disqus_url = page.url | prepend: site.url %}
   {% elsif site.github.url %}
@@ -18,8 +19,4 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
 {% endif %}
-
-<!-- {% debug %} -->
