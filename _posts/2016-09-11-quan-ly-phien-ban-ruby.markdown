@@ -167,15 +167,17 @@ _`bundle` là gem dùng để quản lý bộ gem dùng cho dự án thông qua 
 Như vậy 2 bộ gem `arshavindn.github.io` và `sample-dir` sẽ sử dụng được gem `bundle` và `rubocop` mà không cần phải cài riêng lẽ cho chúng.
 
 **arshavindn.github.io**
+
 ![gemset arshavindn.github.io](/images/posts/2016-09-11-quan-ly-phien-ban-ruby/gemset\ arshavindn.github.io.png)
 
 ![demo arshavindn.github.io](/images/posts/2016-09-11-quan-ly-phien-ban-ruby/demo\ arshavindn.github.io.png)
 
 **sample-dir**
+
 ![demo sample-dir](/images/posts/2016-09-11-quan-ly-phien-ban-ruby/demo\ sample-dir.png)
 
 ### Kết luận
-Khi bắt đầu một dự án, việc thiết lập môi trường sao cho không làm ảnh hưởng đến dự án khác là điều quan trọng. Và theo ý kiến cá nhân thì `rbenv`, `ruby-install` và `rbenv-gemset` thực hiện việc này một cách đơn giản và tiện lợi.
+  Khi bắt đầu một dự án, việc thiết lập môi trường sao cho không làm ảnh hưởng đến dự án khác là điều quan trọng. Và theo ý kiến cá nhân thì `rbenv`, `ruby-install` và `rbenv-gemset` thực hiện việc này một cách đơn giản và tiện lợi.
 
-####Tham khảo thêm:
-Github: [rbenv](https://github.com/rbenv/rbenv), [ruby-build](https://github.com/rbenv/ruby-build), [rbenv-gemset](https://github.com/jf/rbenv-gemset)
+#### Tham khảo thêm:
+  Github: [rbenv](https://github.com/rbenv/rbenv), [ruby-build](https://github.com/rbenv/ruby-build), [rbenv-gemset](https://github.com/jf/rbenv-gemset)

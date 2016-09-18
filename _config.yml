@@ -21,7 +21,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arshavindn.github.io" # the base hostname & protocol for your site
 dev_url: "localhost:4000"
 
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - octopress-debugger
+  - pygments.rb
 
 # Build settings
 markdown: redcarpet
@@ -30,6 +33,9 @@ markdown: redcarpet
 paginate_path: "/page/:num/"
 paginate: 7
 highlighter: pygments
+comments: true
+disqus:
+  shortname: arshavindn
 
 timezone: Asia/Ho_Chi_Minh
 encoding: utf-8
