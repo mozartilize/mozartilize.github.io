@@ -18,7 +18,7 @@ title: Wild, Free, Foolish
 description: > # this means to ignore newlines until "baseurl:"
   I am a programmer who is open-source addicted
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arshavindn.github.i" # the base hostname & protocol for your site
+url: "https://arshavindn.github.io" # the base hostname & protocol for your site
 dev_url: "localhost:4000"
 
 gems:

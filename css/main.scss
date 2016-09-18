@@ -105,11 +105,18 @@ nav {
 
 .post-list {
   list-style-type: none;
+  .post {
+    .comment-count {
+      i {
+        padding-right: 8px;
+      }
+    }
+  }
 }
 
 .post-title {
   font-family: 'Roboto Condensed', sans-serif;
-  .publish-date {
+  .post-meta, .post-meta * {
     font-family: inherit;
     font-size: 18px;
     font-weight: lighter;
