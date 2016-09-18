@@ -1,5 +1,4 @@
-{% debug %}
-{% if page.comments == null or page.comments or site.comments %}
+{% if page.comments == null or page.comments or site.comments.enable %}
   {% if site.url %}
     {% assign disqus_url = page.url | prepend: site.url %}
   {% elsif site.github.url %}

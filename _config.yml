@@ -18,7 +18,7 @@ title: Wild, Free, Foolish
 description: > # this means to ignore newlines until "baseurl:"
   I am a programmer who is open-source addicted
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://arshavindn.github.i" # the base hostname & protocol for your site
 dev_url: "localhost:4000"
 
 gems:
@@ -33,7 +33,9 @@ markdown: redcarpet
 paginate_path: "/page/:num/"
 paginate: 7
 highlighter: pygments
-comments: true
+comments:
+   provider: disqus
+   enable: true
 disqus:
   shortname: arshavindn
 
