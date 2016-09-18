@@ -1,4 +1,4 @@
-{% if ((page.comments == null or page.comments) or site.comments) and jekyll.environment == "production" %}
+{% if ((page.comments == null or page.comments) or site.comments) %}
   {% if site.url %}
     {% assign disqus_url = page.url | prepend: site.url %}
   {% elsif site.github.url %}
