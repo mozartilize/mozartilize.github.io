@@ -116,7 +116,7 @@ nav {
 
 .post-title {
   font-family: 'Roboto Condensed', sans-serif;
-  .post-meta, .post-meta * {
+  .post-meta, .post-meta *:not(i) {
     font-family: inherit;
     font-size: 18px;
     font-weight: lighter;
