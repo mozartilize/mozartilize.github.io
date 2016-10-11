@@ -17,7 +17,7 @@ foo("pretty girls")
 ```
 Ở ví dụ trên, `bar` là parameter của method `foo`. Còn `123456` và `pretty girls` là 2 argument được truyền vào phương thức `foo` khi nó được gọi.
 
-## 2. Giá trị mặc định của argument
+### 2. Giá trị mặc định của argument
 Ví dụ ta có một phương thức:
 
 ```ruby
