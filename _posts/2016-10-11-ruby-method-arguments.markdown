@@ -47,6 +47,7 @@ end
 Nếu bạn muốn giữ nguyên giá trị mặc định của `b` và thay đổi `c` thành `pen` khi gọi `bar`?
 
 Với Python, ta có thể gọi tên của argument và gán giá trị cho nó khi gọi phương thức:
+
 ```python
 def bar(a, b=10, c="pineapple"):
   print(a, b, c)
