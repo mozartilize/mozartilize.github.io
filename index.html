@@ -48,8 +48,7 @@ layout: base
 </div>
 
 {% if site.disqus.shortname %}
-  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
-  <script type="text/javascript">
+  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async>
     $(document).ready(function () {
       DISQUSWIDGETS.getCount({reset: true});
     });
