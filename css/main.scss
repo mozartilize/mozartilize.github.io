@@ -40,7 +40,8 @@ $header_height: 165px;
 // Import partials from the `minima` theme.
 // @import "minima";
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a, li {
+  margin-top: 0;
   font-family: $base-font-family;
 }
 
@@ -81,9 +82,9 @@ nav {
   text-align: center;
   padding: 20px 0;
   span {
-    font-family: 'Galada', cursive;
     color: #840705;
     a {
+      font-family: 'Galada', cursive !important;
       color: inherit;
       &:hover {
         color: #e61610;
@@ -106,6 +107,7 @@ nav {
 .post-list {
   list-style-type: none;
   .post {
+    margin: 40px 0;
     .comment-count {
       i {
         padding-right: 8px;
