@@ -91,4 +91,4 @@ Ví dụ trên thực hiện chuyển 100$ từ tài khoản của `david` sang 
 1. Sử dụng transaction cho một record đơn lẻ.
 2. Những transaction lồng nhau không cần thiết.
 3. Block code của transaction không ném ra ngoại lệ.
-4. Sử dụng transction trong controller.
+4. Sử dụng transaction trong controller.
