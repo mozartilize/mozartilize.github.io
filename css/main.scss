@@ -5,10 +5,10 @@
 
 // Our variables
 $base-font-family: "Roboto", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   18px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 2;
 
 $spacing-unit:     30px;
 
@@ -44,6 +44,8 @@ h1, h2, h3, h4, h5, h6, a, li {
   margin-top: 0;
   font-family: $base-font-family;
 }
+
+.post-content
 
 tt, code, kbd, samp, pre {
   font-family: 'Fira Code Retina', monospace;
@@ -120,14 +122,16 @@ nav {
   font-family: 'Roboto Condensed', sans-serif;
   .post-meta, .post-meta *:not(i) {
     font-family: inherit;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: lighter;
   }
 }
 
 .post-preview, .post-content {
-  p, a {
-    font-family: 'Roboto', sans-serif;
+  p, a, li, q {
+    font-family: 'Roboto Light', sans-serif;
+    line-height: 2;
+    font-size: 15px;
   }
   img {
     max-width: 100%;
