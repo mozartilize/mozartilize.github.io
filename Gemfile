@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.3.0'
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -10,8 +10,8 @@ ruby '2.3.1'
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 # gem 'jekyll', '3.2.1'
-gem 'pygments.rb'
-gem 'redcarpet'
+gem 'pygments.rb' # pygments syntax highlighting in ruby
+gem 'redcarpet' # The safe Markdown parser, reloaded.
 gem 'pry'
 
 # If you want to use GitHub Pages, remove the "gem 'jekyll'" above and
@@ -22,5 +22,4 @@ gem 'github-pages', group: :jekyll_plugins
 group :jekyll_plugins do
   gem 'jekyll-github-metadata'
   gem 'jekyll-paginate'
-  gem 'octopress-debugger'
 end

@@ -16,9 +16,11 @@
 title: Wild, Free, Foolish
 # email: arshavindn@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  I am a programmer who is open-source addicted
+  A coder
+  A tweaker
+  An open-source addicted
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arshavindn.github.io" # the base hostname & protocol for your site
+url: "https://mozartilize.github.io" # the base hostname & protocol for your site
 dev_url: "localhost:4000"
 
 gems:
@@ -36,8 +38,7 @@ highlighter: pygments
 comments:
    provider: disqus
    enable: true
-disqus:
-  shortname: arshavindn
+   shortname: arshavindn
 
 timezone: Asia/Ho_Chi_Minh
 encoding: utf-8

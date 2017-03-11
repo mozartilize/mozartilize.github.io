@@ -7,24 +7,22 @@ layout: base
   <div class="post-list">
     {% if paginator.posts %}
       {% for post in paginator.posts %}
-        {% if site.url %}
-          {% assign disqus_url = post.url | prepend: site.url %}
-        {% elsif site.github.url %}
-          {% assign disqus_url = post.url | prepend: site.github.url %}
-        {% endif %}
+  
+        {% assign disqus_url = post.url | prepend: site.url %}
+
         <div class="post">
           <h1 class="post-title">
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
             <span class="post-meta publish-date">on {{ post.date | date: "%b %-d, %Y" }}</span>
             <span class="post-meta comment-count">
-              <i class="fa fa-comments" aria-hidden="true"></i><span class="disqus-comment-count" data-disqus-identifier="{{ disqus_url }}"></span>
+              <i class="fa fa-comments" aria-hidden="true"></i><span class="disqus-comment-count" data-disqus-url="{{ disqus_url }}"></span>
             </span>
           </h1>
           <div class="post-preview">
             {% if post.content contains '<!-- more -->' %}
-                {{ post.content | split:'<!-- more -->' | first }}
+              {{ post.content | split:'<!-- more -->' | first }}
             {% else %}
-                {{ post.excerpt }}
+              {{ post.excerpt }}
             {% endif %}
             <a href="{{ post.url }}">Read more...</a>
           </div>
@@ -47,10 +45,6 @@ layout: base
 
 </div>
 
-{% if site.disqus.shortname %}
-  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async>
-    $(document).ready(function () {
-      DISQUSWIDGETS.getCount({reset: true});
-    });
-  </script>
+{% if site.comments.shortname %}
+  <script id="dsq-count-scr" src="//{{ site.comments.shortname }}.disqus.com/count.js" async></script>
 {% endif %}
