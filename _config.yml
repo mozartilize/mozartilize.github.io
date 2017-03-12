@@ -30,9 +30,7 @@ gems:
   - pygments.rb
 
 # Build settings
-markdown: redcarpet
-# redcarpet:
-#   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+markdown: kramdown
 paginate_path: "/page/:num/"
 paginate: 7
 highlighter: pygments
