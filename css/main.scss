@@ -112,6 +112,12 @@ nav {
   }
 }
 
+@media screen and (max-width: 385px) {
+  #page-footer .intro-lines {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .wrapper {
@@ -138,11 +144,6 @@ nav {
     .post-meta, .post-meta *:not(i) {
       font-size: 16px;
     }
-  }
-
-  #page-footer .intro-lines {
-    padding-left: 0 !important;
-    text-align: center !important;
   }
 }
 
