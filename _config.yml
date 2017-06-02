@@ -26,14 +26,12 @@ dev_url: "localhost:4000"
 
 gems:
   - jekyll-paginate
-  - octopress-debugger
-  - pygments.rb
 
 # Build settings
 markdown: kramdown
 paginate_path: "/page/:num/"
 paginate: 7
-highlighter: pygments
+highlighter: rouge
 comments:
    provider: disqus
    enable: true
