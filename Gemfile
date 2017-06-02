@@ -10,8 +10,6 @@ ruby '2.3.0'
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 # gem 'jekyll', '3.2.1'
-gem 'pygments.rb' # pygments syntax highlighting in ruby
-gem 'redcarpet' # The safe Markdown parser, reloaded.
 gem 'pry'
 
 # If you want to use GitHub Pages, remove the "gem 'jekyll'" above and
@@ -22,4 +20,5 @@ gem 'github-pages', group: :jekyll_plugins
 group :jekyll_plugins do
   gem 'jekyll-github-metadata'
   gem 'jekyll-paginate'
+  gem 'rouge'
 end

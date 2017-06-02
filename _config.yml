@@ -26,6 +26,7 @@ dev_url: "localhost:4000"
 
 gems:
   - jekyll-paginate
+  - rouge
 
 # Build settings
 markdown: kramdown
