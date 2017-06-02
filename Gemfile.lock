@@ -206,6 +206,7 @@ DEPENDENCIES
   jekyll-github-metadata
   jekyll-paginate
   pry
+  rouge
 
 RUBY VERSION
    ruby 2.3.0p0
