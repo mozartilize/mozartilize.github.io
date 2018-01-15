@@ -16,7 +16,7 @@ Tuy nhiên, đến khi ứng dụng của bạn đủ phức tạp, bạn sẽ t
 - Mỗi ngôn ngữ khác nhau có những thư viện ORM khác nhau: Ruby có ActiveRecord, Sequel...; Python có Django ORM, SQLAlchemy... và nếu chuyển ngôn ngữ hay framework yêu cầu bạn phải học API của những thư viện đó, trong khi mục đích chung của chúng là để truy vấn sql (cứ như hằng sa số complier cho JS vậy).
 
 
-### What ORM lie to us
+### What ORMs lie to us
 Object-oriented model có nhiều điểm mạnh hơn so với relational model, vì phát triển phần mềm là một quá trình khó khắn.
 OOP cung cấp attribute, behavior (method) cho object, trong khi relational model cung cấp data.
 Nếu cố gắng mapping 1:1 giữa O và R, chúng ta sẽ giới hạn khả năng của cả hai công cụ trên.
@@ -77,7 +77,7 @@ JOIN accounts a ON a.id = p.account_id;
 Như ở trên, chúng ta xử dụng các hàm của SQL để truy vấn dữ liệu như DATE_PART, AGE chứ không cần phải tính attribute age cho Profile. Tất nhiên, như vậy sẽ nhanh hơn nhiều nếu so Python vs SQL (cụ thể là Postgresql).
 
 
-### What Django ORM lie to me
+### What Django ORM lies to me
 Việc O/R Mapping của ORM đã tạo nên một lớp abstraction và lớp này che giấu đi quá trình chuyển đổi dữ liệu từ ngôn ngữ lập trình sang cơ sở dữ liệu.
 Ví dụ về model sau:
 
