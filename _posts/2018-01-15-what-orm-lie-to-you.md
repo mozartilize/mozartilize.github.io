@@ -23,8 +23,8 @@ Nếu cố gắng mapping 1:1 giữa O và R, chúng ta sẽ giới hạn khả 
 
 >**Mixing messy data with messy and unpredictable behavior is what ORM really means** - [*Solnic*](http://solnic.eu/2015/09/18/ditch-your-orm.html)
 
-Trong ứng dụng thực tế, giả sử bạn muốn hiển thị thông tin của User gồm email, fullname, address, age và như trên chúng ta có 2 model là Account(email), Profile(fullname, address, date_of_birth).
-Phía ứng dụng, bạn phải định nghĩa attibure email cho Profile nếu bạn muốn query từ Profile và hiển thị dữ liệu.
+Trong ứng dụng thực tế, giả sử bạn muốn hiển thị thông tin của User gồm email, fullname, address, age và như trên chúng ta có 2 model là `Account(email)`, `Profile(fullname, address, date_of_birth)`.
+Phía ứng dụng, bạn phải định nghĩa attibute email cho Profile nếu bạn muốn query từ Profile và hiển thị dữ liệu.
 
 ```python
 class Profile(models.Model):
@@ -59,7 +59,7 @@ SELECT accounts.* FROM accounts;
 
 Không preload:
 ```SQL
-SELECT profile.* FROM profiles;
+SELECT profiles.* FROM profiles;
 SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.id where profiles.id = 1;
 SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.id where profiles.id = 2;
 SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.id where profiles.id = 3;
