@@ -52,13 +52,13 @@ profiles = Profile.objects.all().preload_related('account')
 Ở câu query, thay vì thực hiện join, Django ORM sẽ thực hiện 2 query, vì preload accounts giúp tránh trường hợp N+1 query. Nếu không, mỗi lần lặp qua profile ở template, Django sẽ query lần lượt qua từng row của account để lấy email:
 
 Có preload:
-```SQL
+```sql
 SELECT profiles.* FROM profiles;
 SELECT accounts.* FROM accounts;
 ```
 
 Không preload:
-```SQL
+```sql
 SELECT profiles.* FROM profiles;
 SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.id where profiles.id = 1;
 SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.id where profiles.id = 2;
@@ -68,7 +68,7 @@ SELECT accounts.* FROM accounts JOIN profiles ON profiles.account_id = accounts.
 
 ORM đơn giản sẽ xử lý như vậy, nếu ứng dụng phức tạp hơn, ORM có thể không hỗ trợ generate query cho bạn.
 Nếu là database, nó sẽ query như sau:
-```SQL
+```sql
 SELECT p.fullname, p.address, DATE_PART('year', AGE(p.date_of_birth)) AS age, a.email
 FROM profiles p
 JOIN accounts a ON a.id = p.account_id;
