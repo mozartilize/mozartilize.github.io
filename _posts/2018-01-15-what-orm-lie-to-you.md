@@ -40,15 +40,13 @@ class Profile(models.Model):
 # then query
 profiles = Profile.objects.all().preload_related('account')
 
-# then show in template
-{%- raw %}
+# then show in template{% raw %}
 {% for profile in profiles %}
   - {{ profile.fullname }}
   - {{ profile.email }}
   - {{ profile.age }}
   - {{ profile.address }}
-{% endfor %}
-{%- endraw %}
+{% endfor %}{% endraw %}
 ```
 
 Ở câu query, thay vì thực hiện join, Django ORM sẽ thực hiện 2 query, vì preload accounts giúp tránh trường hợp N+1 query. Nếu không, mỗi lần lặp qua profile ở template, Django sẽ query lần lượt qua từng row của account để lấy email:
