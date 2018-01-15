@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "What ORM lie to you"
+title: "What ORMs lie to you"
 ---
 
 ### What is ORM?
 Nếu bạn là web developer và dùng một framework nào đó, chắc hẳn bạn đã biết về ORM. Còn nếu không, wow, good for you!
 
-ORM - viết tắt của Object Relational Mapping, là kĩ thuật ánh xạ object model (từ class của ngôn ngữ lập trình) sang relation model (từ table của cơ sở dữ liệu) và ngược lại. Nghĩa là nếu bạn tạo một model class thì ORM sẽ giúp bạn tạo tabel tương ứng trong DB, nếu bạn query dữ liệu từ DB, ORM sẽ giúp bạn chuyển data đó sang object.
+ORM - viết tắt của Object Relational Mapping, là kĩ thuật ánh xạ object model (từ class của ngôn ngữ lập trình) sang relation model (từ table của cơ sở dữ liệu) và ngược lại. Nghĩa là nếu bạn tạo một model class thì ORM sẽ giúp bạn tạo table tương ứng trong DB, nếu bạn query dữ liệu từ DB, ORM sẽ giúp bạn chuyển data đó sang object.
 
 Chính vì thế ORM giúp cho quá trình phát triển ứng dụng nhanh hơn, giúp bạn tập trung về business nhiều hơn là về vấn đề kĩ thuật.
 
@@ -24,7 +24,7 @@ Nếu cố gắng mapping 1:1 giữa O và R, chúng ta sẽ giới hạn khả 
 >**Mixing messy data with messy and unpredictable behavior is what ORM really means** - [*Solnic*](http://solnic.eu/2015/09/18/ditch-your-orm.html)
 
 Trong ứng dụng thực tế, giả sử bạn muốn hiển thị thông tin của User gồm email, fullname, address, age và như trên chúng ta có 2 model là `Account(email)`, `Profile(fullname, address, date_of_birth)`.
-Phía ứng dụng, bạn phải định nghĩa attibute email cho Profile nếu bạn muốn query từ Profile và hiển thị dữ liệu.
+Phía ứng dụng, bạn phải định nghĩa attribute email cho Profile nếu bạn muốn query từ Profile và hiển thị dữ liệu.
 
 ```python
 class Profile(models.Model):
