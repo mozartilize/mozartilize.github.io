@@ -6,7 +6,7 @@
 // Our variables
 $base-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $base-font-size:   18px;
-$base-font-weight: 400;
+$base-font-weight: 500;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 2;
 
@@ -173,7 +173,7 @@ nav {
 
 .post-preview, .post-content {
   p, a, li, q {
-    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 2;
     font-size: 15px;
   }
