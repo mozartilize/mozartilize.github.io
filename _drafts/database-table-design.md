@@ -7,20 +7,70 @@ title: "Database table design"
 
 Chúng ta có 2 table như sau:
 
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align:center">fish_info</th>
+    </tr>
+    <tr>
+      <th>common</th>
+      <th>species</th>
+      <th>location</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bass, largemouth</td>
+      <td>M. salmoides</td>
+      <td>Montgomery Lake, GA</td>
+      <td>22 lb 4 oz</td>
+    </tr>
+    <tr>
+      <td>walleye</td>
+      <td>S. vitreus</td>
+      <td>Old Hickory Lake, TN</td>
+      <td>25 lb 0 oz</td>
+    </tr>
+  </tbody>
+</table>
 
-`fish_info`
-
-| common           | species      | location             | weight     |
-| ---------------- | ------------ | -------------------- | ---------- |
-| bass, largemouth | M. salmoides | Montgomery Lake, GA  | 22 lb 4 oz |
-| walleye          | S. vitreus   | Old Hickory Lake, TN | 25 lb 0 oz |
-
-`fish_records`
-
-| first_name | last_name | common           | location         | state | weight     | date       |
-| ---------- | --------- | ---------------- | ---------------- | ----- | ---------- | ---------- |
-| George     | Perry     | bass, largemouth | Montgomery Lake  | GA    | 22 lb 4 oz | 06/02/1932 |
-| Mabry      | Harper    | walleye          | Old Hickory Lake | TN    | 25 lb 0 oz | 08/02/1960 |
+<table>
+  <thead>
+    <tr>
+      <th colspan="7" style="text-align:center">fish_records</th>
+    </tr>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>common</th>
+      <th>location</th>
+      <th>state</th>
+      <th>weight</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>George</td>
+      <td>Perry</td>
+      <td>bass, largemouth</td>
+      <td>Montgomery Lake</td>
+      <td>GA</td>
+      <td>22 lb 4 oz</td>
+      <td>06/02/1932</td>
+    </tr>
+    <tr>
+      <td>Mabry</td>
+      <td>Harper</td>
+      <td>walleye</td>
+      <td>Old Hickory Lake</td>
+      <td>TN</td>
+      <td>25 lb 0 oz</td>
+      <td>08/02/1960</td>
+    </tr>
+  </tbody>
+</table>
 
 Hai table trên có một số cột giống nhau, một số cột mà table kia không có, và có cột được tách ra như với `location` và `state`.
 
@@ -41,12 +91,33 @@ Dữ liệu atomic có 2 nguyên tắc cơ bản:
 
 2. Một bảng có dữ liệu atomic không thể có nhiều cột với cùng kiểu dữ liệu
 
-`classes`
-
-| teacher     | student1 | student2 | student3 |
-| ----------- | -------- | -------- | -------- |
-| Ms. Martini | Joe      | Ron      | Kelly    |
-| Mr. Howard  | Sanjaya  | Tim      | Julie    |
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align:center">classes</th>
+    </tr>
+    <tr>
+      <th>teacher</th>
+      <th>student1</th>
+      <th>student2</th>
+      <th>student3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ms. Martini</td>
+      <td>Joe</td>
+      <td>Ron</td>
+      <td>Kelly</td>
+    </tr>
+    <tr>
+      <td>Mr. Howard</td>
+      <td>Sanjaya</td>
+      <td>Tim</td>
+      <td>Julie</td>
+    </tr>
+  </tbody>
+</table>
 
 Ở đây nên có một lưu ý các cột học sinh lặp lại không phải thuộc tính của giáo viên, mà là các đối tượng khác nhau.
 
@@ -85,42 +156,149 @@ Thiết kế database sao cho normal nghĩa là phải tuân theo những nguyê
 
 Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều kiện mỗi giáo viên chỉ dạy một lớp và mỗi học sinh chỉ được tham gia một lớp.
 
-`teachers`
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align:center">teachers</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ms. Martini</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Mr. Howard</td>
+    </tr>
+  </tbody>
+</table>
 
-| id  | name        |
-| --- | ----------- |
-| 1   | Ms. Martini |
-| 2   | Mr. Howard  |
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align:center">students</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>year_of_birth</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Joe</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ron</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Kelly</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sanjaya</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tim</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Julie</td>
+      <td>1994</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
 
-`students`
+<table>
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align:center">classes</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>subject</th>
+      <th>teacher_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Physics</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Physics</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
 
-| id  | name    | year_of_birth | age |
-| --- | ------- | ------------- | --- |
-| 1   | Joe     | 1994          | 24  |
-| 2   | Ron     | 1994          | 24  |
-| 3   | Kelly   | 1994          | 24  |
-| 4   | Sanjaya | 1994          | 24  |
-| 5   | Tim     | 1994          | 24  |
-| 6   | Julie   | 1994          | 24  |
-
-`classes`
-
-| id  | subject | teacher_id |
-| --- | ------- | ---------- |
-| 1   | Physics | 2          |
-| 2   | Physics | 1          |
-
-
-`class_list`
-
-| id  | student_id | class_id |
-| --- | ---------- | -------- |
-| 1   | 1          | 1        |
-| 2   | 2          | 1        |
-| 3   | 3          | 1        |
-| 4   | 4          | 2        |
-| 5   | 5          | 2        |
-| 6   | 6          | 2        |
+<table>
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align:center">class_list</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>student_id</th>
+      <th>class_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Functional dependency
 
@@ -134,12 +312,30 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
 
 Ở bảng `classes`, nếu ta không cần cột `id` làm khóa chính, thì sự kết hợp duy nhất (unique) của 2 cột còn lại là `subject` và `teacher_id` tạo thành khóa tổng hợp. Nghĩa là cứ mỗi giáo viên và một môn học, chúng ta sẽ có một lớp.
 
-`classes`
-
-| subject | teacher_id | teacher_address          |
-| ------- | ---------- | ------------------------ |
-| Physics | 2          | 3961  Roosevelt Road, WA |
-| Physics | 1          | 1223  Hillcrest Lane, CA |
+<table>
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align:center">classes</th>
+    </tr>
+    <tr>
+      <th>subject</th>
+      <th>teacher_id</th>
+      <th>teacher_address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Physics</td>
+      <td>2</td>
+      <td>3961  Roosevelt Road, WA</td>
+    </tr>
+    <tr>
+      <td>Physics</td>
+      <td>1</td>
+      <td>1223  Hillcrest Lane, CA</td>
+    </tr>
+  </tbody>
+</table>
 
 Với bảng trên, ta thấy `teacher_address` (non-key column) phụ thuộc vào `teacher_id` - một trong cột tạo nên khóa tổng hợp (key column) vì nếu `teacher_id` thay đổi buộc address phải thay đổi theo, do vậy ta nói `teacher_address` phụ thuộc hàm một phần vào `teacher_id`.
 
@@ -147,14 +343,50 @@ Với bảng trên, ta thấy `teacher_address` (non-key column) phụ thuộc v
 
 Hãy xem thêm một ví dụ nữa.
 
-`superheroes`
-
-| name           | power                    | weakness | city       | initials |
-| -------------- | ------------------------ | -------- | ---------- | -------- |
-| Super Trashman | Cleans quickly           | bleach   | Gotham     | ST       |
-| The Broker     | Makes money from nothing | NULL     | New York   | TB       |
-| Super Guy      | Flies                    | birds    | Metropolis | SG       |
-| Wonder Waiter  | Never forgets an order   | insects  | Paris      | WW       |
+<table>
+  <thead>
+    <tr>
+      <th colspan="5" style="text-align:center">superheroes</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th>power</th>
+      <th>weakness</th>
+      <th>city</th>
+      <th>initials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Super Trashman</td>
+      <td>Cleans quickly</td>
+      <td>bleach</td>
+      <td>Gotham</td>
+      <td>ST</td>
+    </tr>
+    <tr>
+      <td>The Broker</td>
+      <td>Makes money from nothing</td>
+      <td>NULL</td>
+      <td>New York</td>
+      <td>TB</td>
+    </tr>
+    <tr>
+      <td>Super Guy</td>
+      <td>Flies</td>
+      <td>birds</td>
+      <td>Metropolis</td>
+      <td>SG</td>
+    </tr>
+    <tr>
+      <td>Wonder Waiter</td>
+      <td>Never forgets an order</td>
+      <td>insects</td>
+      <td>Paris</td>
+      <td>WW</td>
+    </tr>
+  </tbody>
+</table>
 
 Ở bảng `superheroes`, 2 cột `name` và `power` tạo thành khóa tổng hợp, mỗi siêu anh hùng đều có tên và siêu năng lực của riêng mình. Tuy nhiên cột `initials` có thể nói là viết tắt của tên của siêu anh hùng đó. Và nếu cột `name` (key column) thay đổi, `initials` cũng phải thay đổi theo, ta gọi đó là phụ thuộc hàm một phần.
 
@@ -171,56 +403,248 @@ Phụ thuộc hàm của bảng `students` ở ví dụ trên được gọi là
 
 Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
 
-`toys`
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align:center">toys</th>
+    </tr>
+    <tr>
+      <th>toy_id</th>
+      <th>toy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>wiffleball</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>frisbee</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>kite</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>yoyo</td>
+    </tr>
+  </tbody>
+</table>
 
-| toy_id | toy        |
-| ------ | ---------- |
-| 5      | wiffleball |
-| 6      | frisbee    |
-| 9      | kite       |
-| 12     | yoyo       |
 
-`inventories`
-
-| toy_id | store_id | color  | inventory | store_address    |
-| ------ | -------- | ------ | --------- | ---------------- |
-| 5      | 1        | white  | 34        | 23 Maple         |
-| 5      | 3        | yellow | 12        | 100 E. North St. |
-| 5      | 1        | blue   | 5         | 23 Maple         |
-| 6      | 2        | green  | 10        | 1902 Amber Ln.   |
-| 6      | 4        | yellow | 24        | 17 Engleside     |
-| 9      | 1        | red    | 50        | 23 Maple         |
-| 9      | 2        | blue   | 2         | 1902 Amber Ln    |
-| 9      | 2        | green  | 18        | 1902 Amber Ln    |
-| 12     | 4        | white  | 28        | 17 Engleside     |
-| 12     | 4        | yellow | 11        | 17 Engleside     |
+<table>
+  <thead>
+    <tr>
+      <th colspan="5" style="text-align:center">inventories</th>
+    </tr>
+    <tr>
+      <th>toy_id</th>
+      <th>store_id</th>
+      <th>color</th>
+      <th>inventory</th>
+      <th>store_address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+      <td>white</td>
+      <td>34</td>
+      <td>23 Maple</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>3</td>
+      <td>yellow</td>
+      <td>12</td>
+      <td>100 E. North St.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+      <td>blue</td>
+      <td>5</td>
+      <td>23 Maple</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2</td>
+      <td>green</td>
+      <td>10</td>
+      <td>1902 Amber Ln.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>4</td>
+      <td>yellow</td>
+      <td>24</td>
+      <td>17 Engleside</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1</td>
+      <td>red</td>
+      <td>50</td>
+      <td>23 Maple</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2</td>
+      <td>blue</td>
+      <td>2</td>
+      <td>1902 Amber Ln</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2</td>
+      <td>green</td>
+      <td>18</td>
+      <td>1902 Amber Ln</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>4</td>
+      <td>white</td>
+      <td>28</td>
+      <td>17 Engleside</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>4</td>
+      <td>yellow</td>
+      <td>11</td>
+      <td>17 Engleside</td>
+    </tr>
+  </tbody>
+</table>
 
 `store_address` phụ thuộc vào `store_id` nên chúng ta sẽ đưa nó sang bảng `stores` riêng biệt.
 
-`stores`
 
-| id  | address          | phone    | manager |
-| --- | ---------------- | -------- | ------- |
-| 1   | 23 Maple         | 555-6712 | Joe     |
-| 2   | 1902 Amber Ln.   | 555-3478 | Susan   |
-| 3   | 100 E. North St. | 555-0987 | Tara    |
-| 4   | 17 Engleside     | 555-6554 | Gordon  |
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align:center">stores</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>address</th>
+      <th>phone</th>
+      <th>manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>23 Maple</td>
+      <td>555-6712</td>
+      <td>Joe</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1902 Amber Ln.</td>
+      <td>555-3478</td>
+      <td>Susan</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>100 E. North St.</td>
+      <td>555-0987</td>
+      <td>Tara</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>17 Engleside</td>
+      <td>555-6554</td>
+      <td>Gordon</td>
+    </tr>
+  </tbody>
+</table>
 
-`inventories`
-
-| toy_id | store_id | color  | inventory |
-| ------ | -------- | ------ | --------- |
-| 5      | 1        | white  | 34        |
-| 5      | 2        | red    | 34        |
-| 5      | 3        | yellow | 12        |
-| 5      | 1        | blue   | 5         |
-| 6      | 2        | green  | 10        |
-| 6      | 4        | yellow | 24        |
-| 9      | 1        | red    | 50        |
-| 9      | 2        | blue   | 2         |
-| 9      | 2        | green  | 18        |
-| 12     | 4        | white  | 28        |
-| 12     | 4        | yellow | 11        |
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align:center">inventories</th>
+    </tr>
+    <tr>
+      <th>toy_id</th>
+      <th>store_id</th>
+      <th>color</th>
+      <th>inventory</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+      <td>white</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2</td>
+      <td>red</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>3</td>
+      <td>yellow</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+      <td>blue</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2</td>
+      <td>green</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>4</td>
+      <td>yellow</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1</td>
+      <td>red</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2</td>
+      <td>blue</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2</td>
+      <td>green</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>4</td>
+      <td>white</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>4</td>
+      <td>yellow</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
 
 `toy_id`, `store_id`, `color` tạo thành khóa tổng hợp.
 
@@ -230,36 +654,158 @@ Nếu các loại đồ chơi được định nghĩa sẵn, hay còn gọi là 
 
 Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của `inventories`. Điều này dẫn đến vi phạm 1NF.
 
-`toys`
+<table>
+  <thead>
+    <tr>
+      <th colspan="5" style="text-align:center">toys</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>inventory</th>
+      <th>color</th>
+      <th>cost</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>whiffleball</td>
+      <td>white</td>
+      <td>1.95</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>whiffleball</td>
+      <td>yellow</td>
+      <td>2.20</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>whiffleball</td>
+      <td>blue</td>
+      <td>1.95</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>frisbee</td>
+      <td>green</td>
+      <td>3.50</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>frisbee</td>
+      <td>yellow</td>
+      <td>1.50</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>kite</td>
+      <td>red</td>
+      <td>5.75</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>kite</td>
+      <td>blue</td>
+      <td>5.75</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>kite</td>
+      <td>green</td>
+      <td>3.15</td>
+      <td>0.8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>yoyo</td>
+      <td>white</td>
+      <td>4.25</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>yoyo</td>
+      <td>yellow</td>
+      <td>1.50</td>
+      <td>0.2</td>
+    </tr>
+  </tbody>
+</table>
 
-| id  | inventory   | color  | cost | weight |
-| --- | ----------- | ------ | ---- | ------ |
-| 1   | whiffleball | white  | 1.95 | 0.3    |
-| 2   | whiffleball | yellow | 2.20 | 0.4    |
-| 3   | whiffleball | blue   | 1.95 | 0.3    |
-| 4   | frisbee     | green  | 3.50 | 0.5    |
-| 5   | frisbee     | yellow | 1.50 | 0.2    |
-| 6   | kite        | red    | 5.75 | 1.2    |
-| 7   | kite        | blue   | 5.75 | 1.2    |
-| 8   | kite        | green  | 3.15 | 0.8    |
-| 9   | yoyo        | white  | 4.25 | 0.4    |
-| 10  | yoyo        | yellow | 1.50 | 0.2    |
-
-`inventories`
-
-| toy_id | store_id | inventory |
-| ------ | -------- | --------- |
-| 5      | 1        | 34        |
-| 5      | 2        | 34        |
-| 5      | 3        | 12        |
-| 5      | 1        | 5         |
-| 6      | 2        | 10        |
-| 6      | 4        | 24        |
-| 9      | 1        | 50        |
-| 9      | 2        | 2         |
-| 9      | 2        | 18        |
-| 12     | 4        | 28        |
-| 12     | 4        | 11        |
+<table>
+  <tr>
+    <th colspan="3" style="text-align:center">inventories</th>
+  </tr>
+  <tr>
+    <td>toy_id</td>
+    <td>store_id</td>
+    <td>inventory</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>1</td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>2</td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>3</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>1</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>2</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>4</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>1</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>2</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>4</td>
+    <td>28</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>4</td>
+    <td>11</td>
+  </tr>
+</table>
 
 
 ### iii. Third normal form (3NF)
@@ -269,33 +815,96 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
 
 Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
 
-`tournament_winners`
-
-| tournament           | year | winner         | date_of_birth     |
-| -------------------- | ---- | -------------- | ----------------- |
-| Indiana Invitational | 1998 | Al Fredrickson | 21 July 1975      |
-| Cleveland Open       | 1999 | Bob Albertson  | 28 September 1968 |
-| Des Moines Masters   | 1999 | Al Fredrickson | 21 July 1975      |
-| Indiana Invitational | 1999 | Chip Masterson | 14 March 1977     |
+<table>
+  <tr>
+    <th colspan="4" style="text-align:center">tournament_winners</th>
+  </tr>
+  <tr>
+    <th>tournament</th>
+    <th>year</th>
+    <th>winner</th>
+    <th>date_of_birth</th>
+  </tr>
+  <tr>
+    <td>Indiana Invitational</td>
+    <td>1998</td>
+    <td>Al Fredrickson</td>
+    <td>21 July 1975</td>
+  </tr>
+  <tr>
+    <td>Cleveland Open</td>
+    <td>1999</td>
+    <td>Bob Albertson</td>
+    <td>28 September 1968</td>
+  </tr>
+  <tr>
+    <td>Des Moines Masters</td>
+    <td>1999</td>
+    <td>Al Fredrickson</td>
+    <td>21 July 1975</td>
+  </tr>
+  <tr>
+    <td>Indiana Invitational</td>
+    <td>1999</td>
+    <td>Chip Masterson</td>
+    <td>14 March 1977</td>
+  </tr>
+</table>
 
 Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng này vi phạm 3NF vì `date_of_birth` (non-key column) phụ thuộc vào `winner` (non-key column).
 
-`tournament_winners`
+<table>
+    <tr>
+      <th colspan="3" style="text-align:center">tournament_winners</th>
+    </tr>
+  <tr>
+    <th>tournament</th>
+    <th>year</th>
+    <th>winner</th>
+  </tr>
+  <tr>
+    <td>Indiana Invitational</td>
+    <td>1998</td>
+    <td>Al Fredrickson</td>
+  </tr>
+  <tr>
+    <td>Cleveland Open</td>
+    <td>1999</td>
+    <td>Bob Albertson</td>
+  </tr>
+  <tr>
+    <td>Des Moines Masters</td>
+    <td>1999</td>
+    <td>Al Fredrickson</td>
+  </tr>
+  <tr>
+    <td>Indiana Invitational</td>
+    <td>1999</td>
+    <td>Chip Masterson</td>
+  </tr>
+</table>
 
-| tournament           | year | winner         |
-| -------------------- | ---- | -------------- |
-| Indiana Invitational | 1998 | Al Fredrickson |
-| Cleveland Open       | 1999 | Bob Albertson  |
-| Des Moines Masters   | 1999 | Al Fredrickson |
-| Indiana Invitational | 1999 | Chip Masterson |
-
-`winner_dates_of_birth`
-
-| winner         | date_of_birth     |
-| -------------- | ----------------- |
-| Chip Masterson | 14 March 1977     |
-| Al Fredrickson | 21 July 1975      |
-| Bob Albertson  | 28 September 1968 |
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center">winner_dates_of_birth</th>
+  </tr>
+  <tr>
+    <th>winner</th>
+    <th>date_of_birth</th>
+  </tr>
+  <tr>
+    <td>Chip Masterson</td>
+    <td>14 March 1977</td>
+  </tr>
+  <tr>
+    <td>Al Fredrickson</td>
+    <td>21 July 1975</td>
+  </tr>
+  <tr>
+    <td>Bob Albertson </td>
+    <td>28 September 1968</td>
+  </tr>
+</table>
 
 
 ## Tham khảo
