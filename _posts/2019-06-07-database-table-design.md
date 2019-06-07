@@ -7,7 +7,7 @@ title: "Database table design"
 
 Chúng ta có 2 table như sau:
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">fish_info</th>
@@ -35,7 +35,7 @@ Chúng ta có 2 table như sau:
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="7" style="text-align:center">fish_records</th>
@@ -79,19 +79,35 @@ Theo bạn nghĩ thì table nào được thiết kế tốt hơn?
 Câu trả lời là không có table nào cả. Cách bạn thiết kế table hoàn toàn dựa vào mục đích sử dụng của bạn. Giả sử table `fish_info` được dùng trong công việc của một nhà thủy sinh học, còn table `fish_records` dành cho một nhà buôn thủy sản. Vì nhà buôn thủy sản cần biết thông tin của người bắt được loài cá đó còn nhà thủy sinh học thì không. Vì nhà buôn thủy sản nhiều lúc cần search thông tin của `state` nơi bắt được loài cá đó, nên cần phải tách cột đó ra để query được nhanh hơn...
 
 `first_name`, `last_name` ở table `fish_records` được tách ra vậy cột `date` có cần tách ra các cột `day`, `month`, `year` không? Điều đó còn tùy, nếu nhà buôn cảm thấy thông tin được chia nhỏ đến mức như vậy là đủ rồi thì không cần thiết nữa. Dữ liệu lúc đó là đã **atomic** - nghĩa là nó không thể hoặc không nên chia nhỏ nữa.
+
 <!-- more -->
+
 Dữ liệu atomic có 2 nguyên tắc cơ bản:
 
 1. Một cột chứa dữ liệu atomic không thể có các giá trị cùng kiểu
 
-| food_name | ingredients                  |
-| --------- | ---------------------------- |
-| bread     | flour, milk, egg, yeast, oil |
-| salad     | lettuce, tomato, cucumber    |
+<table class="table table-sm table-bordered table-responsive-md">
+  <thead>
+    <tr>
+      <th>food_name</th>
+      <th>ingredients</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bread</td>
+      <td>flour, milk, egg, yeast, oil</td>
+    </tr>
+    <tr>
+      <td>salad</td>
+      <td>lettuce, tomato, cucumber</td>
+    </tr>
+  </tbody>
+</table>
 
 2. Một bảng có dữ liệu atomic không thể có nhiều cột với cùng kiểu dữ liệu
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">classes</th>
@@ -123,21 +139,76 @@ Dữ liệu atomic có 2 nguyên tắc cơ bản:
 
 Một ví dụ khác, chúng ta có bảng `toys`:
 
-| toy_id | toy        | color1 | color2 | color3 |
-| ------ | ---------- | ------ | ------ | ------ |
-| 5      | wiffleball | white  | yellow | blue   |
-| 6      | frisbee    | green  | yellow |        |
-| 9      | kite       | red    | blue   | green  |
-| 12     | yoyo       | white  | yellow |        |
+<table class="table table-sm table-bordered table-responsive-md">
+  <thead>
+    <tr>
+      <th>toy_id</th>
+      <th>toy</th>
+      <th>color1</th>
+      <th>color2</th>
+      <th>color3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>wiffleball</td>
+      <td>white</td>
+      <td>yellow</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>frisbee</td>
+      <td>green</td>
+      <td>yellow</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>kite</td>
+      <td>red</td>
+      <td>blue</td>
+      <td>green</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>yoyo</td>
+      <td>white</td>
+      <td>yellow</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 
 Các color ở đây là loại màu của đồ chơi, wiffleball có 3 màu khác nhau, tương tự yoyo chỉ có 2 loại màu, chứ không có nghĩa là 1 quả wiffleball có cả 3 màu trên nó.
 
 Mình đã gặp một table như sau:
 
-| tag_name | color1 | color2 | color3 |
-| -------- | ------ | ------ | ------ |
-| p        | #ccc   | #fff   | #eee   |
-| div      | #ccc   | #aaa   | #eee   |
+<table class="table table-sm table-bordered table-responsive-md">
+  <thead>
+    <tr>
+      <th>tag_name</th>
+      <th>color1</th>
+      <th>color2</th>
+      <th>color3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>p</td>
+      <td>#ccc</td>
+      <td>#fff</td>
+      <td>#eee</td>
+    </tr>
+    <tr>
+      <td>div</td>
+      <td>#ccc</td>
+      <td>#aaa</td>
+      <td>#eee</td>
+    </tr>
+  </tbody>
+</table>
 
 Thì `color1`, `color2` và `color3` ở đây là thuộc tính của `tag` nên thiết kế table như vậy không hề sai, vấn đề ở cách đặt tên, đúng hơn có thể là `background_color`, `foreground_color` và `border_color`.
 
@@ -156,7 +227,7 @@ Thiết kế database sao cho normal nghĩa là phải tuân theo những nguyê
 
 Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều kiện mỗi giáo viên chỉ dạy một lớp và mỗi học sinh chỉ được tham gia một lớp.
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="2" style="text-align:center">teachers</th>
@@ -178,7 +249,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">students</th>
@@ -230,7 +301,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">classes</th>
@@ -255,7 +326,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">class_list</th>
@@ -312,7 +383,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
 
 Ở bảng `classes`, nếu ta không cần cột `id` làm khóa chính, thì sự kết hợp duy nhất (unique) của 2 cột còn lại là `subject` và `teacher_id` tạo thành khóa tổng hợp. Nghĩa là cứ mỗi giáo viên và một môn học, chúng ta sẽ có một lớp.
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">classes</th>
@@ -343,7 +414,7 @@ Với bảng trên, ta thấy `teacher_address` (non-key column) phụ thuộc v
 
 Hãy xem thêm một ví dụ nữa.
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">superheroes</th>
@@ -403,7 +474,7 @@ Phụ thuộc hàm của bảng `students` ở ví dụ trên được gọi là
 
 Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="2" style="text-align:center">toys</th>
@@ -434,7 +505,7 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
 </table>
 
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">inventories</th>
@@ -524,7 +595,7 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
 `store_address` phụ thuộc vào `store_id` nên chúng ta sẽ đưa nó sang bảng `stores` riêng biệt.
 
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">stores</th>
@@ -564,7 +635,7 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">inventories</th>
@@ -654,7 +725,7 @@ Nếu các loại đồ chơi được định nghĩa sẵn, hay còn gọi là 
 
 Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của `inventories`. Điều này dẫn đến vi phạm 1NF.
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">toys</th>
@@ -741,7 +812,7 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
   </tbody>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <tr>
     <th colspan="3" style="text-align:center">inventories</th>
   </tr>
@@ -815,7 +886,7 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
 
 Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <tr>
     <th colspan="4" style="text-align:center">tournament_winners</th>
   </tr>
@@ -853,7 +924,7 @@ Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
 
 Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng này vi phạm 3NF vì `date_of_birth` (non-key column) phụ thuộc vào `winner` (non-key column).
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
     <tr>
       <th colspan="3" style="text-align:center">tournament_winners</th>
     </tr>
@@ -884,7 +955,7 @@ Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng nà
   </tr>
 </table>
 
-<table>
+<table class="table table-sm table-bordered table-responsive-md">
   <tr>
     <th colspan="2" style="text-align:center">winner_dates_of_birth</th>
   </tr>
