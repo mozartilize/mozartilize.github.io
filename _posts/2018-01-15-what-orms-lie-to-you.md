@@ -17,7 +17,7 @@ Tuy nhiên, đến khi ứng dụng của bạn đủ phức tạp, bạn sẽ t
 
 
 ### What ORMs lie to us
-Object-oriented model có nhiều điểm mạnh hơn so với relational model, vì phát triển phần mềm là một quá trình khó khắn.
+Object-oriented model có nhiều điểm mạnh hơn so với relational model, vì phát triển phần mềm là một quá trình khó khăn.
 OOP cung cấp attribute, behavior (method) cho object, trong khi relational model cung cấp data.
 Nếu cố gắng mapping 1:1 giữa O và R, chúng ta sẽ giới hạn khả năng của cả hai công cụ trên.
 
