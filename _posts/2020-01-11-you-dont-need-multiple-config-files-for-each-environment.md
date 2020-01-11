@@ -7,6 +7,8 @@ title: "You don't need multiple config files for each environment"
 
 Config file hoặc setting file cung cấp cho bạn khả năng quản lý các flag hoặc các tùy chọn để ứng dụng có thể bật tắt chức năng nào đó (eg: debugger), cũng có thể config cho một service nào đó (eg: database). Một khi có config cho một module hay tính năng, thì config đó cũng đã có giá trị mặc định trong ứng dụng của bạn và nó cần được document về việc nó là cái gì, sử dụng ra sao, có những option nào, vân vân.
 
+<!-- more -->
+
 Ví dụ với vscode, bạn có thể thay đổi theme tùy ý, thay đổi đó đã được lưu vào một file settings.json nào đó trong máy tính của bạn, nhưng trong lần khởi chạy đầu tiên, rõ ràng nó đã load theme mặc định. vscode là ứng dụng miễn phí, bạn tải về cài trên máy tính mình sử dụng, hay nói cách khác bạn đã deploy nó trên môi trường của mình, tất nhiên bạn được hướng dẫn làm sao để đổi theme.
 
 ## Wep application configuration
