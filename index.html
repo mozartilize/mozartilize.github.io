@@ -3,48 +3,55 @@ layout: base
 ---
 
 <div class="home">
-
   <div class="post-list">
-    {% if paginator.posts %}
-      {% for post in paginator.posts %}
-  
-        {% assign disqus_url = post.url | prepend: site.url %}
+    {% if paginator.posts %} {% for post in paginator.posts %} {% assign
+    disqus_url = post.url | prepend: site.url %}
 
-        <div class="post">
-          <h1 class="post-title">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-            <span class="post-meta publish-date">on {{ post.date | date: "%b %-d, %Y" }}</span>
-            <span class="post-meta comment-count">
-              <i class="fa fa-comments" aria-hidden="true"></i><span class="disqus-comment-count" data-disqus-url="{{ disqus_url }}"></span>
-            </span>
-          </h1>
-          <div class="post-preview">
-            {% if post.content contains '<!-- more -->' %}
-              {{ post.content | split:'<!-- more -->' | first }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-            <a href="{{ post.url }}">Read more...</a>
-          </div>
-        </div>
-      {% endfor %}
-    {% else %}
-      <h2>There is no post to be displayed.</h2>
+    <div class="post">
+      <h1 class="post-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"
+          >{{ post.title | escape }}</a
+        >
+        <span class="post-meta publish-date"
+          >on {{ post.date | date: "%b %-d, %Y" }}</span
+        >
+        <span class="post-meta comment-count">
+          <i class="fa fa-comments" aria-hidden="true"></i
+          ><span
+            class="disqus-comment-count"
+            data-disqus-url="{{ disqus_url }}"
+          ></span>
+        </span>
+      </h1>
+      <div class="post-preview">
+        {% if post.content contains '<!-- more -->' %} {{ post.content | split:'<!-- more -->'
+        | first }} {% else %} {{ post.excerpt }} {% endif %}
+        <a href="{{ post.url }}">Read more...</a>
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <h2>There is no post to be displayed.</h2>
     {% endif %}
   </div>
   <!-- Pagination links -->
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="btn previous"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="btn next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    <a href="{{ paginator.previous_page_path }}" class="pure-button previous"
+      ><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a
+    >
+    {% endif %} {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pure-button next"
+      >Next <i class="fa fa-angle-right" aria-hidden="true"></i
+    ></a>
     {% endif %}
   </div>
   <div class="pagination-clear"></div>
-
 </div>
 
 {% if site.comments.shortname %}
-  <script id="dsq-count-scr" src="//{{ site.comments.shortname }}.disqus.com/count.js" async></script>
+<script
+  id="dsq-count-scr"
+  src="//{{ site.comments.shortname }}.disqus.com/count.js"
+  async
+></script>
 {% endif %}

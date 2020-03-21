@@ -5,3 +5,4 @@ _site
 .rbenv-gemsets
 Gemfile.lock
 .vscode/
+vendor

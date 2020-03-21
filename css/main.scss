@@ -1,30 +1,31 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
+$base-font-family: Inter, sans;
+$base-font-size: 18px;
 $base-font-weight: 500;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 2;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
-$text-color:       #111;
+$text-color: #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color: #2a7ae2;
 
-$grey-color:       #828282;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width: 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm: 600px;
+$on-laptop: 800px;
 
 $header_height: 165px;
 
@@ -39,37 +40,67 @@ $header_height: 165px;
 
 // Import partials from the `minima` theme.
 // @import "minima";
+html,
+body {
+  height: 100%;
+}
 
-h1, h2, h3, h4, h5, h6, a, li {
-  margin-top: 0;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
   font-family: $base-font-family;
 }
 
-tt, code, kbd, samp, pre {
-  font-family: 'Fira Code Retina', monospace;
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: "Fira Mono", monospace;
 }
 
 a {
   color: black;
+  text-decoration: none;
   &:hover {
     color: grey;
-    text-decoration: none;
   }
-  word-break: break-all;
 }
 
-p {
-  margin-bottom: .5rem;
+.table-wrapper {
+  position: relative;
+  table {
+    // margin: 1.5rem 0;
+    overflow-x: auto;
+    display: inline-block;
+    max-width: 100%;
+  }
 }
 
-header#page-header{
+#page-header {
   background-color: black;
   position: relative;
   height: $header_height;
   margin-bottom: 105px;
   #title {
+    margin: 0;
     padding: 10px;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     font-size: 3em;
     text-align: center;
     color: white;
@@ -89,7 +120,7 @@ nav {
   span {
     color: #840705;
     a {
-      font-family: 'Galada', cursive !important;
+      font-family: "Galada", cursive !important;
       color: inherit;
       &:hover {
         color: #e61610;
@@ -109,8 +140,8 @@ nav {
 }
 
 .post-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  .post-meta, .post-meta *:not(i) {
+  .post-meta,
+  .post-meta *:not(i) {
     font-family: inherit;
     font-size: 20px;
     font-weight: lighter;
@@ -132,24 +163,9 @@ nav {
     width: 90%;
   }
 
-  h1, h2 {
-    font-size: 20px;
-  }
-
-  h3, h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 16px;
-  }
-
-  h6 {
-    font-size: 14px;
-  }
-
   .post-title {
-    .post-meta, .post-meta *:not(i) {
+    .post-meta,
+    .post-meta *:not(i) {
       font-size: 16px;
     }
   }
@@ -179,9 +195,12 @@ nav {
   }
 }
 
-.post-preview, .post-content {
-  p, a, li, q {
-    font-family: 'Roboto', sans-serif;
+.post-preview,
+.post-content {
+  p,
+  a,
+  li,
+  q {
     line-height: 1.6;
   }
   img {
@@ -196,7 +215,7 @@ nav {
     border-radius: 0;
     box-shadow: 0 2px 0 0 grey;
     color: white;
-    font-family: 'Fira Code Retina', 'Fira Mono', monospace;
+    font-family: "Fira Mono", monospace;
     i {
       font-size: 20px;
       vertical-align: text-bottom;
@@ -250,11 +269,11 @@ footer#page-footer {
       padding-left: 10px;
       text-align: left;
       p {
-        font-family: 'Fira Code Retina', 'Fira Mono', monospace;
+        font-family: "Fira Mono", monospace;
         color: white;
       }
     }
   }
 }
 
-@import 'syntax-highlighting';
+@import "syntax-highlighting";

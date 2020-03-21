@@ -7,7 +7,8 @@ title: "Database table design"
 
 Chúng ta có 2 table như sau:
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">fish_info</th>
@@ -34,8 +35,10 @@ Chúng ta có 2 table như sau:
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="7" style="text-align:center">fish_records</th>
@@ -71,6 +74,7 @@ Chúng ta có 2 table như sau:
     </tr>
   </tbody>
 </table>
+</div>
 
 Hai table trên có một số cột giống nhau, một số cột mà table kia không có, và có cột được tách ra như với `location` và `state`.
 
@@ -86,7 +90,8 @@ Dữ liệu atomic có 2 nguyên tắc cơ bản:
 
 1. Một cột chứa dữ liệu atomic không thể có các giá trị cùng kiểu
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th>food_name</th>
@@ -104,10 +109,12 @@ Dữ liệu atomic có 2 nguyên tắc cơ bản:
     </tr>
   </tbody>
 </table>
+</div>
 
 2. Một bảng có dữ liệu atomic không thể có nhiều cột với cùng kiểu dữ liệu
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">classes</th>
@@ -134,12 +141,14 @@ Dữ liệu atomic có 2 nguyên tắc cơ bản:
     </tr>
   </tbody>
 </table>
+</div>
 
 Ở đây nên có một lưu ý các cột học sinh lặp lại không phải thuộc tính của giáo viên, mà là các đối tượng khác nhau.
 
 Một ví dụ khác, chúng ta có bảng `toys`:
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th>toy_id</th>
@@ -180,12 +189,14 @@ Một ví dụ khác, chúng ta có bảng `toys`:
     </tr>
   </tbody>
 </table>
+</div>
 
 Các color ở đây là loại màu của đồ chơi, wiffleball có 3 màu khác nhau, tương tự yoyo chỉ có 2 loại màu, chứ không có nghĩa là 1 quả wiffleball có cả 3 màu trên nó.
 
 Mình đã gặp một table như sau:
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th>tag_name</th>
@@ -209,6 +220,7 @@ Mình đã gặp một table như sau:
     </tr>
   </tbody>
 </table>
+</div>
 
 Thì `color1`, `color2` và `color3` ở đây là thuộc tính của `tag` nên thiết kế table như vậy không hề sai, vấn đề ở cách đặt tên, đúng hơn có thể là `background_color`, `foreground_color` và `border_color`.
 
@@ -217,17 +229,20 @@ Thì `color1`, `color2` và `color3` ở đây là thuộc tính của `tag` nê
 Thiết kế database sao cho normal nghĩa là phải tuân theo những nguyên tắc chuẩn, và ai cũng có thể hiểu được.
 
 ### i. First normal form (1NF)
+
 1. Các cột chỉ chứa các giá trị atomic
 2. Dữ liệu cùng kiểu không được lặp lại ở nhiều cột
 
 1NF thực thi các tiêu chí sau:
+
 - Không gặp lại các nhóm dữ liệu trong bảng.
 - Tạo các bảng riêng lẻ cho các dữ liệu liên quan.
 - Mỗi bảng ghi của dữ liệu phải có một khóa chính.
 
 Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều kiện mỗi giáo viên chỉ dạy một lớp và mỗi học sinh chỉ được tham gia một lớp.
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="2" style="text-align:center">teachers</th>
@@ -248,8 +263,10 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">students</th>
@@ -300,8 +317,10 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">classes</th>
@@ -325,8 +344,10 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">class_list</th>
@@ -370,6 +391,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
     </tr>
   </tbody>
 </table>
+</div>
 
 #### Functional dependency
 
@@ -383,7 +405,8 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
 
 Ở bảng `classes`, nếu ta không cần cột `id` làm khóa chính, thì sự kết hợp duy nhất (unique) của 2 cột còn lại là `subject` và `teacher_id` tạo thành khóa tổng hợp. Nghĩa là cứ mỗi giáo viên và một môn học, chúng ta sẽ có một lớp.
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="3" style="text-align:center">classes</th>
@@ -407,6 +430,7 @@ Chúng ta có thể thiết kế lại bảng `classes` như sau, với điều 
     </tr>
   </tbody>
 </table>
+</div>
 
 Với bảng trên, ta thấy `teacher_address` (non-key column) phụ thuộc vào `teacher_id` - một trong cột tạo nên khóa tổng hợp (key column) vì nếu `teacher_id` thay đổi buộc address phải thay đổi theo, do vậy ta nói `teacher_address` phụ thuộc hàm một phần vào `teacher_id`.
 
@@ -414,7 +438,8 @@ Với bảng trên, ta thấy `teacher_address` (non-key column) phụ thuộc v
 
 Hãy xem thêm một ví dụ nữa.
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">superheroes</th>
@@ -458,6 +483,7 @@ Hãy xem thêm một ví dụ nữa.
     </tr>
   </tbody>
 </table>
+</div>
 
 Ở bảng `superheroes`, 2 cột `name` và `power` tạo thành khóa tổng hợp, mỗi siêu anh hùng đều có tên và siêu năng lực của riêng mình. Tuy nhiên cột `initials` có thể nói là viết tắt của tên của siêu anh hùng đó. Và nếu cột `name` (key column) thay đổi, `initials` cũng phải thay đổi theo, ta gọi đó là phụ thuộc hàm một phần.
 
@@ -474,7 +500,8 @@ Phụ thuộc hàm của bảng `students` ở ví dụ trên được gọi là
 
 Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="2" style="text-align:center">toys</th>
@@ -503,9 +530,10 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
     </tr>
   </tbody>
 </table>
+</div>
 
-
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">inventories</th>
@@ -591,11 +619,12 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
     </tr>
   </tbody>
 </table>
+</div>
 
 `store_address` phụ thuộc vào `store_id` nên chúng ta sẽ đưa nó sang bảng `stores` riêng biệt.
 
-
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">stores</th>
@@ -634,8 +663,10 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="4" style="text-align:center">inventories</th>
@@ -716,6 +747,7 @@ Chúng ta có phiên bản mở rộng của bảng `toys` dưới đây:
     </tr>
   </tbody>
 </table>
+</div>
 
 `toy_id`, `store_id`, `color` tạo thành khóa tổng hợp.
 
@@ -725,7 +757,8 @@ Nếu các loại đồ chơi được định nghĩa sẵn, hay còn gọi là 
 
 Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của `inventories`. Điều này dẫn đến vi phạm 1NF.
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
   <thead>
     <tr>
       <th colspan="5" style="text-align:center">toys</th>
@@ -811,16 +844,21 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
     </tr>
   </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
+  <thead>
   <tr>
     <th colspan="3" style="text-align:center">inventories</th>
   </tr>
   <tr>
-    <td>toy_id</td>
-    <td>store_id</td>
-    <td>inventory</td>
+    <th>toy_id</th>
+    <th>store_id</th>
+    <th>inventory</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>5</td>
     <td>1</td>
@@ -876,8 +914,9 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
     <td>4</td>
     <td>11</td>
   </tr>
+  </tbody>
 </table>
-
+</div>
 
 ### iii. Third normal form (3NF)
 
@@ -886,7 +925,9 @@ Và rõ ràng `color` là một thuộc tính thuộc về `toys` thay vì của
 
 Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
+  <thead>
   <tr>
     <th colspan="4" style="text-align:center">tournament_winners</th>
   </tr>
@@ -896,6 +937,8 @@ Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
     <th>winner</th>
     <th>date_of_birth</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>Indiana Invitational</td>
     <td>1998</td>
@@ -920,11 +963,15 @@ Bảng dưới đây thỏa mãn 2NF nhưng vi phạm 3NF:
     <td>Chip Masterson</td>
     <td>14 March 1977</td>
   </tr>
+  </tbody>
 </table>
+</div>
 
 Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng này vi phạm 3NF vì `date_of_birth` (non-key column) phụ thuộc vào `winner` (non-key column).
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
+  <thead>
     <tr>
       <th colspan="3" style="text-align:center">tournament_winners</th>
     </tr>
@@ -933,6 +980,8 @@ Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng nà
     <th>year</th>
     <th>winner</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>Indiana Invitational</td>
     <td>1998</td>
@@ -953,9 +1002,13 @@ Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng nà
     <td>1999</td>
     <td>Chip Masterson</td>
   </tr>
+  </tbody>
 </table>
+</div>
 
-<table class="table table-sm table-bordered table-responsive-md">
+<div class="table-wrapper">
+<table class="pure-table pure-table-bordered">
+  <thead>
   <tr>
     <th colspan="2" style="text-align:center">winner_dates_of_birth</th>
   </tr>
@@ -963,6 +1016,8 @@ Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng nà
     <th>winner</th>
     <th>date_of_birth</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>Chip Masterson</td>
     <td>14 March 1977</td>
@@ -975,8 +1030,9 @@ Khóa tổng hợp ở đây từ `tournamemt` và `year`. Tuy nhiên bảng nà
     <td>Bob Albertson </td>
     <td>28 September 1968</td>
   </tr>
+  </tbody>
 </table>
-
+</div>
 
 ## Tham khảo
 
