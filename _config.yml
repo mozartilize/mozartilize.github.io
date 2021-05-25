@@ -24,7 +24,7 @@ repository: "mozartilize/mozartilize.github.io"
 url: "https://mozartilize.github.io" # the base hostname & protocol for your site
 dev_url: "localhost:4000"
 
-gems:
+plugins:
   - jekyll-paginate
   - rouge
 

@@ -5,9 +5,9 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Inter, sans;
-$base-font-size: 18px;
-$base-font-weight: 500;
+$base-font-family: "EB Garamond", sans-serif;
+$base-font-size: 20px;
+$base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 2;
 
@@ -43,6 +43,10 @@ $header_height: 165px;
 html,
 body {
   height: 100%;
+  font-family: $base-font-family;
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -55,23 +59,37 @@ main {
   flex-grow: 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-li {
-  font-family: $base-font-family;
-}
-
 tt,
 code,
 kbd,
 samp,
 pre {
   font-family: "Fira Mono", monospace;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.65em;
+}
+
+h3 {
+  font-size: 1.45em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.8em 0 0.3em 0;
+}
+
+p, a, ol, ul {
+ margin: 0.75em 0;
 }
 
 a {
@@ -84,11 +102,23 @@ a {
 
 .table-wrapper {
   position: relative;
+  margin: 15px 0;
+  overflow-x: auto;
   table {
-    // margin: 1.5rem 0;
-    overflow-x: auto;
-    display: inline-block;
-    max-width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 35%;
+  }
+
+  td,
+  th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 5px 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(235, 235, 235);
   }
 }
 
@@ -116,11 +146,11 @@ a {
 
 nav {
   text-align: center;
-  padding: 20px 0;
   span {
     color: #840705;
     a {
-      font-family: "Galada", cursive !important;
+      font-weight: bold;
+      font-style: italic;
       color: inherit;
       &:hover {
         color: #e61610;
@@ -138,14 +168,19 @@ nav {
 .wrapper {
   margin: auto;
 }
-
+.post-header {
+  margin: 1em 0;
+}
 .post-title {
-  .post-meta,
-  .post-meta *:not(i) {
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: lighter;
-  }
+  margin-bottom: 0.15em;
+}
+.post-meta,
+.post-meta *:not(i) {
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 !important;
 }
 
 @media screen and (max-width: 385px) {
@@ -201,7 +236,7 @@ nav {
   a,
   li,
   q {
-    line-height: 1.6;
+    line-height: 1.4;
   }
   img {
     max-width: 100%;
@@ -271,6 +306,7 @@ footer#page-footer {
       p {
         font-family: "Fira Mono", monospace;
         color: white;
+        font-size: 14px;
       }
     }
   }

@@ -7,6 +7,8 @@ title: "Múi giờ trong Python"
 
 Múi giờ của bạn là bao nhiêu? Nếu câu trả lời là "UTC+X" thì có thể là nó đúng trong thời điểm hiện tại, chứ không hắn là lúc nào cũng vậy. Ví dụ dữ liệu múi giờ của "Asia/Ho_Chi_Minh":
 
+<!-- more -->
+
 ```
 # Zone	NAME		GMTOFF	RULES	FORMAT	[UNTIL]
 Zone Asia/Ho_Chi_Minh	7:06:40 -	LMT	1906 Jul  1
