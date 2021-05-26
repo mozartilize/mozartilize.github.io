@@ -4,9 +4,7 @@ layout: base
 
 <div class="home">
   <div class="post-list">
-    {% if paginator.posts %} {% for post in paginator.posts %} {% assign
-    disqus_url = post.url | prepend: site.url %}
-
+    {% if paginator.posts %} {% for post in paginator.posts %}
     <div class="post">
       <header class="post-header">
       <h1 class="post-title">
@@ -21,8 +19,7 @@ layout: base
         <span class="post-meta comment-count">
           <i class="fa fa-comments" aria-hidden="true"></i
           ><span
-            class="disqus-comment-count"
-            data-disqus-url="{{ disqus_url }}"
+            class="comment-count"
           ></span>
         </span>
       </p>
@@ -51,11 +48,4 @@ layout: base
   </div>
   <div class="pagination-clear"></div>
 </div>
-
-{% if site.comments.shortname %}
-<script
-  id="dsq-count-scr"
-  src="//{{ site.comments.shortname }}.disqus.com/count.js"
-  async
-></script>
-{% endif %}
+</script>
