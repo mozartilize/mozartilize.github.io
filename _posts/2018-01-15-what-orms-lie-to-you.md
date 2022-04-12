@@ -98,3 +98,7 @@ Mình sẽ chỉ đưa ra solution ngắn ngọn của Jeff Atwood từ [Object-
 Không có giải pháp hoàn hảo nào có thể giải quyết được vấn đề của ORM. Vẫn có những giải pháp, nhưng chúng đều bao gồm những bước lùi, rủi ro nghiêm trọng. Điều tệ hơn là bạn sẽ chưa thấy hậu quả đến khi viết code.
 
 Một giải pháp hữu hiệu là chọn một trong 2 giữa O và R. Nếu bạn bỏ đi đẳng thức giữa O và R, bạn sẽ không còn gặp vấn đề về mapping nữa.
+
+### Update 2022/04/12
+
+Thực ra django model field không apply default cho database có cái lý của nó. Với table lớn chứa nhiều dữ liệu, nếu bạn thêm một column mới kèm default value thì quá trình migration sẽ diễn ra rất lâu, làm ảnh hưởng đến tính availability của ứng dụng.
