@@ -3,8 +3,6 @@ layout: post
 title: "Transactions"
 ---
 
-# Transactions
-
 Trong một hệ thống dữ liệu, việc đọc, ghi dữ liệu bất cứ lúc nào cũng có thể xảy ra lỗi (lỗi phần cứng, ứng dụng crash, mất nguồn điện, vấn đề về xử lý song song,...). Transaction là một cơ chế đơn giản hóa việc xử lý các lỗi này, tạo ra một abstraction để application sử dụng và tập trung vào business logic.
 
 Một transaction là một tập hợp các lệnh đọc, ghi; được coi như là một đơn vị thực thi: hoặc là cả transaction thành công (commit), hoặc là cả transaction thất bại (abort, rollback).
