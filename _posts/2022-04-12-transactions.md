@@ -21,6 +21,8 @@ Isolation: Đảm bảo các transaction chạy đồng thời được tách bi
 
 Durability: Đảm bảo rằng nếu transaction đã commit, dự liệu được lưu lại an toàn.
 
+Bài viết này sẽ tập trung vào Isolation Levels.
+
 # Why Isolation Levels?
 
 Nếu hai transaction không đụng đến cùng một dữ liệu, chúng có thể chạy song song một cách an toàn. Những vấn đề về xử lý song song (race conditions) chỉ xuất hiện khi một transaction đọc dữ liệu từ một transaction khác đang chỉnh sửa chúng, hoặc cả hai cùng đồng thời chỉnh sửa một dữ liệu nào đó.
@@ -28,6 +30,8 @@ Nếu hai transaction không đụng đến cùng một dữ liệu, chúng có 
 Bug liên quan đến xử lý song song khó tìm ra bằng test, vì nó chỉ xảy ra theo hướng hên xui. Nếu một ứng dụng có nhiều người dùng truy cập vào cùng thời điểm khiến cho vấn đề này càng khó giải quyết hơn nữa.
 
 Isolation level là đáp án cho vấn đề này. Serializable isolation level là một loại trong số đó đảm bảo rằng không có transaction nào chạy song song bằng cách ép buộc chúng chạy theo tuần tự. Tuy nhiên nó lại ảnh hưởng đến hiệu suất của ứng dụng. Do đó ứng dụng thường dùng những isolation level yếu hơn. Chúng không đảm bảo cho bạn tránh khỏi 100% bug do xử lý song song nhưng trong thực tế vẫn được dùng.
+
+Chúng ta hãy cùng tìm hiểu các race condition và cách giải quyết chúng khi sử dụng transaction.
 
 ## Read Committed
 
@@ -126,3 +130,15 @@ Nếu trong trường hợp không có record nào để lock, chúng ta có th�
 Sử dụng serializable isolation level là phù hợp nhất trong những trường hợp như thế này.
 
 Mình có tạo một repo demo giải quyết vấn đề write skew của booking meeting room [ở đây](https://github.com/mozartilize/db-isolation-level-demo).
+
+## What's next?
+
+Có một điều chúng ta có thể nhận ra ở write skew là nó vi phạm requirement, tuy nhiên điều đó lại phụ thuộc vào phía logic của ứng dụng. Chúng ta cần đảm bảo consistency nhưng không thông qua những gì database cung cấp (foreign key, uniquess...). Bài viết tới sẽ tập trung vào consistency và distributed transation.
+
+## Tham khảo
+
+[Isolation Levels in Database Management Systems](https://www.youtube.com/watch?v=-gxyut1VLcs)
+
+[[Backend #9] Understand isolation levels & read phenomena in MySQL & PostgreSQL via examples](https://www.youtube.com/watch?v=4EajrPgJAk0)
+
+Martin Kleppmann's Design Data-Intensive Applications
