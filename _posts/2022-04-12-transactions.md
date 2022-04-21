@@ -48,14 +48,14 @@ Khi 2 transaction cùng chỉnh sửa một dữ liệu. Transaction 1 set x=2, 
 
 ## Repeatable Read (Snapshot Isolation)
 
-### Unreadtable Read (Read Skew)
+### Nonrepeatable Read (Read Skew)
 
 Ví dụ bạn có 1 transaction update data qua nhiều bước.
 Như ngân hàng Alice có 2 tài khoản, 1 tài khoản thẻ, 1 tài khoản mobile chẳng hạn.
 
 ![read skew](/images/posts/2022-04-12-transactions/read-skew.png)
 
-Cô ấy muốn xem tổng số tiền của 2 tài khoản là bao nhiêu, nhưng giữa 2 câu lệnh select lại có 1 transaction đang thực thi. Unreadtable read gây ra lỗi chỉ lấy được tổng $900 nhưng thực tế là $1000.
+Cô ấy muốn xem tổng số tiền của 2 tài khoản là bao nhiêu, nhưng giữa 2 câu lệnh select lại có 1 transaction đang thực thi. Nonrepeatable read gây ra lỗi chỉ lấy được tổng $900 nhưng thực tế là $1000.
 
 Alice có thể dễ dàng tải lại trang web để kiểm tra tài khoản của mình nhưng trong một số trường hợp không thể.
 
@@ -131,7 +131,7 @@ Mình có tạo một repo demo giải quyết vấn đề write skew của book
 
 ## What's next?
 
-Có một điều chúng ta có thể nhận ra ở write skew là nó vi phạm requirement, tuy nhiên điều đó lại phụ thuộc vào phía logic của ứng dụng. Chúng ta cần đảm bảo consistency nhưng không thông qua những gì database cung cấp (foreign key, uniquess...). Bài viết tới sẽ tập trung vào consistency và distributed transation.
+Có một điều chúng ta có thể nhận ra ở write skew là nó vi phạm requirement, tuy nhiên điều đó lại phụ thuộc vào phía logic của ứng dụng. Chúng ta cần đảm bảo consistency nhưng không thông qua những gì database cung cấp (foreign key, uniquess...). Bài viết tới sẽ tập trung vào consistency và distributed transaction.
 
 ## Tham khảo
 
