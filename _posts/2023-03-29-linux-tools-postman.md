@@ -173,5 +173,5 @@ với thêm một số bước đơn giản nữa.  Với Linux, không gì là 
 
 - Unique curl output file để có thể gọi 1 request nhiều lần song song.
 
-- Xử lý `curl` `-i/--include` hiệu quả hơn.  Hiện tại dùng với `--curl-opts` `-i` phải
+- Xử lý `curl` `-i/--include` hiệu quả hơn.  Hiện tại dùng với `--curl-opts`, `-i` phải
     tách biệt với các flag khác.
