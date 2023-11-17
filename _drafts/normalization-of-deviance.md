@@ -11,10 +11,10 @@ Dưới đây là một vài ví dụ tiêu biểu.
 
 Có một công ty mà tôi nghĩ là nơi tốt nhất mình từng làm việc, kết hợp
 giữa Valve và Netflix. Mọi người rất tuyệt vời và bạn được tự do làm những điều
-mình muốn. Nhưng đó cũng là một tác dụng phụ, họ mất khoản một nửa nhân viên mới
+mình muốn. Nhưng nó cũng gây ra tác dụng phụ, họ mất khoản một nửa nhân viên mới
 trong năm đầu tiên, một số tự nguyện và một số thì không. Hoàn toàn bình thường,
 nhỉ? Dưới đây là một số giai thoại được những người ở những nơi tôi từng làm việc
-coi là hoàn toàn bình thường. Và đa số không chỉ bình thường mà còn đáng khen ngợi.
+coi là hoàn toàn bình thường. Và đa số không chỉ bình thường mà còn đáng để nói tới.
 
 Có một công ty cực kì bảo mật về hệ thống. Điển hình là có một team nọ, nếu
 họ thông báo lỗi đến nhà sản xuất phần cứng, các lỗi đó sẽ được vá và những
@@ -45,11 +45,11 @@ Có một công ty với văn hóa kì lạ đến mức khi tôi viết một b
 không chỉ viết dài hơn những bài khác, mà còn dài hơn tổng số chúng cộng lại
 (đến giờ đã hơn 100k từ, ngang với một cuốn sách nhỏ). Đây cũng là công ty tôi
 được biết là rất tuyệt vời, vì, thay vì sử dụng phân tích dữ liệu để đưa ra quyết định,
-họ sử dụng các mối quan hệ, và ý tưởng dùng dữ liệu cũng là một điều bí ẩn;
+họ sử dụng các mối quan hệ cá nhân, và ý tưởng dùng dữ liệu cũng là một điều bí ẩn;
 không ai làm vậy cả. Đây cũng là công ty mà bốn điều họ nói với tôi để thuyết
 phục tôi gia nhập đều là sai, và cuối cùng công việc ở đó tôi đặc biệt không hề
 muốn làm. Khi tôi vào làm, team của tôi không hề sử dụng quản lý phiên bản
-(version control). Mặc dùng tôi đã thuyết phục được họ điều đó, tôi lại thất bại khi
+(version control). Mặc dù tôi đã thuyết phục được họ điều đó, tôi lại thất bại khi
 yêu cầu họ chạy kiểm thử (test) trước khi biên dịch chương trình (build) để khỏi
 phải gặp nhiều lỗi trong ngày. Khi tôi nói nó ảnh hưởng đến năng suất làm việc
 thì họ bảo không sao vì nó ảnh hưởng tất cả mọi người như nhau. Nếu là có vấn đề
@@ -68,28 +68,28 @@ những thứ giá trị khoảng vài trăm đô phải mất hàng tháng tr�
 từ chối.
 
 Bạn có thể thắc mắc phải chăng tôi vừa làm việc ở những nơi có tình trạng lộn xộn
-bất thường. Đúng vậy, các công ty đó thường được coi là rất ổn và hai trong số đó
-được coi là những nơi tốt nhất để làm việc, nhưng cũng có thể những nơi đó được đánh
-giá quá cao. Nhưng tôi cũng có trải nghiệm tương tự khi nghe những câu chuyện về cách
-các công ty khác vận hành, thậm chí ở những nơi có tiếng xuất sắc về chuyên môn kỹ thuật,
-ngoại trừ việc tôi là người cảm thấy sốc còn bạn của tôi cho rằng chuyện của họ là
-bình thường.
+một cách bất thường không. Đúng vậy, các công ty đó thường được coi là rất ổn và
+hai trong số đó được coi là những nơi tốt nhất để làm việc, nhưng cũng có thể
+những nơi đó được đánh giá quá cao. Nhưng tôi cũng có trải nghiệm tương tự khi
+nghe những câu chuyện về cách các công ty khác vận hành, thậm chí ở những nơi có
+tiếng xuất sắc về chuyên môn kỹ thuật, ngoại trừ việc tôi là người cảm thấy sốc
+còn bạn của tôi cho rằng chuyện của họ là bình thường.
 
-Có những công ty sử dụng flaky, bao gồm phần lớn các công ty mới nổi sử dụng
-Python ở thung lũng Silicon. Nếu bạn không biết nó là gì, thì đây là một thư
+Có những công ty sử dụng flaky, bao gồm phần lớn các công ty dùng Python mới nổi
+ở thung lũng Silicon. Nếu bạn không biết nó là gì, thì đây là một thư
 viện để bạn đánh dấu những kiểm thử (tests) chạy lúc đạt (pass) lúc không (fail).
 Khi tôi hỏi một số đồng nghiệp về thư viện này, học đều đoán rằng nó sẽ chạy những kiểm
 thử nhiều lần và đánh kiểm thử đó không đạt nếu một trong những lần chạy không đạt.
 Đúng, nhưng không hoàn toàn. Về mặt kĩ thuật thì flaky có thể được dùng như vậy nhưng
 thực tế né được dùng để chạy kiểm thử nhiều lần và đánh đạt nếu một trong những
-lần chạy đạt. Công ty tạ ra flaky là một công ty cung cấp sản phẩm về lưu trữ,
+lần chạy đạt. Công ty tạo ra flaky là một công ty cung cấp sản phẩm về lưu trữ,
 và nó được sử dụng rộng rãi bởi các đối thủ cạnh tranh.
 
 Có một công ty nổi tiếng vì có hệ thống vận hành với độ tin cậy hai số 9 trong lần
 kiểm tra trước của tôi, vì những lý do hoàn toàn có thể dự đoán được từ các quy trình
 kỹ thuật xuất sắc của họ. Đây là điều không cần phải được công khai vì có nhiều
 công ty đạt được điều đó. Ở đây tôi không nói về những công ty đang cố gắng trở thành
-reddit hoặc twitter thứ hai, vì họ chỉ cần tính ổn định một số 9 là đủ. Tôi đang nói
+reddit hay twitter thứ hai, vì họ chỉ cần tính ổn định một số 9 là đủ. Tôi đang nói
 về những công ty bán nền tảng mà các công ty khác dựa vào, nếu dịch vụ của họ có sự cố
 thì các công ty lệ thuộc sẽ bị liên lụy. Nhiều công ty bán cơ sở hạ tầng chỉ có độ tin
 cậy ở mức hai số 9.
@@ -99,8 +99,8 @@ gần như hoàn toàn vào phát triển sản phẩm. Điều đó hoàn toàn
 công ty này có giá trị gần như bằng 0 khi chúng được thành lập; họ không bận tâm
 đến những thứ bảo vệ họ khỏi tổn thất, chẳng hạn như các biện pháp tốt cho vận
 hành hoặc bảo mật, bởi vì họ không có gì để mất cả (à, ngoại trừ dữ liệu người
-dùng khi sự cố bảo mật không thể tránh khỏi xảy ra và nếu bạn nói chuyện với
-những người làm bảo mật ở những công ty mới nổi này (Unicorns) bạn sẽ biết rằng
+dùng khi sự cố bảo mật xảy ra là không thể tránh khỏi và nếu bạn nói chuyện với
+những người làm bảo mật ở những công ty mới nổi này (unicorns) bạn sẽ biết rằng
 những điều này là có thật).
 
 Kết quả là nó tạo ra một nền văn hóa nơi mà nguồn lực chỉ dồn vào phát triển và
@@ -128,7 +128,7 @@ thuyết phục. Họ trở thành như thế vì bị bẽ mặt vài lần, đ
 cho những người muốn làm mọi việc "chuẩn chỉnh" sữa chữa lại những quy trình
 căn bản. Mọi công ty có phương pháp vận hành tốt mà tôi biết đều trải qua câu
 chuyện như thế. Microsoft là một trò hề trong khâu bảo mật nhiều năm, cho đến khi
-có quá số lỗi bảo mật bị khai thác quá lớn buộc họ phải nghiêm túc hơn về nó.
+số lỗi bảo mật bị khai thác quá lớn buộc họ phải nghiêm túc hơn về nó.
 Điều này nghe có vẻ đơn giản, nhưng nếu bạn nói chuyện với những người liên quan,
 sự thay đổi thật tàn khốc. Bất chấp yêu cầu từ cấp trên, vẫn có sự phản kháng mạnh
 mẽ từ những người đưa công ty đạt được vị thế của năm 2003 không muốn lãng phí
@@ -145,13 +145,13 @@ sống được cứu hơn. Mọi người có thể bỏ qua các biển báo, 
 việc bị buộc phải rửa tay.
 
 Điều này phản ánh một số nỗ lực của các công ty công nghệ đưa ra các phương pháp
-vận hành tốt hơn. Nếu bạn nói với mọi người rằng họ nên như thế này, điều đó sẽ giúp
+vận hành tốt hơn. Nếu bạn nói với mọi người rằng họ nên làm như thế này, điều đó sẽ giúp
 ích được phần nào. Nhưng nếu bạn yêu cầu áp dụng chúng thông qua code review, điều đó
 sẽ giúp ích rất nhiều.
 
 Dữ liệu cho thấy con người thực sự rất tệ trong việc dành thời gian để làm những
-việc được hiểu rõ là có thể giảm thiểu nguy cơ xảy ra các sự kiện hiếm gặp nhưng
-thảm khốc. Chúng ta sẽ biện hộ rằng đi đường tắt là điều đúng đắn và hợp lý nên làm.
+việc được hiểu rõ là có thể giảm thiểu nguy cơ xảy ra các thảm họa. Chúng ta sẽ
+biện hộ rằng đi đường tắt là điều đúng đắn và hợp lý nên làm.
 Có một thuật ngữ cho vấn đề này: quá trình bình thường hóa của sự lệch lạc. Nó được
 nghiên cứu kỹ trong một số ngành khác bao gồm chăm sóc sức khỏe, hàng không, kỹ thuật
 cơ khí, kỹ thuật hàng không vũ trụ và kỹ thuật dân dụng, nhưng chúng tôi không thấy nó
@@ -160,8 +160,48 @@ cơ khí, kỹ thuật hàng không vũ trụ và kỹ thuật dân dụng, như
 
 Có thể học hỏi từ sai lầm của người khác thay vì tự mình mắc phải mọi lỗi lầm không?
 Với tình trạng của ngành phần mềm thì nghe có vẻ khó xảy ra, nhưng hãy thử xem.
-John Banja có một bài viết tóm tắt rất hay về quá trình bình thường hóa của sự lệch
+John Banja có một báo cáo tóm tắt rất hay về quá trình bình thường hóa của sự lệch
 lạc trong y tế, với những bài học mà chúng ta có thể áp dụng vào ngành phần mềm. Một
 điều cần lưu ý là, vì Banja quan tâm đến kết quả của bệnh nhân, nên có sự tương đồng
 gần gũi với các phương thức thất bại của devops, nhưng quá trình bình thường hóa của
 sự lệch lạc cũng xảy ra trong nhiều bối cảnh khác nhau.
+
+Phần đầu của báo cáo mô tả chi tiết một số bi kịch, cả trong y tế lẫn ngành
+khác. Dưới đây là một ví dụ tiêu biểu:
+
+>Một trường hợp sơ suất nghiêm trọng mà tác giả tham gia với tư cách là nhân chứng chuyên môn liên quan đến việc bác sĩ gây mê tắt máy thở theo yêu cầu của bác sĩ phẫu thuật muốn chụp X-quang bụng bệnh nhân (Banja, 2005, trang 87-101). Máy thở được chỉ định tắt trong vài giây nhưng bác sĩ gây mê lại quên bật lại hoặc tưởng là đã bật lại. Bệnh nhân không có oxy trong một thời gian đủ dài khiến cô rơi vào trạng thái thiếu oxy toàn cơ thể, khiến cô rơi vào trạng thái thực vật. Cô ấy không bao giờ hồi phục, bị ngắt máy thở nhân tạo sau 9 ngày và qua đời sau 2 ngày tiếp theo. Sau đó, người ta phát hiện ra rằng thiết bị theo dõi và báo động gây mê trong phòng mổ đã được cố tình lập trình ở chế độ “tạm dừng vô thời hạn” để bác sĩ gây mê không được cảnh báo về vấn đề của máy thở. Đáng buồn thay, chính công cụ được sử dụng để ngăn chặn rủi ro như trên đã bị vô hiệu hóa, có thể là do nhân viên phòng phẫu thuật nhận thấy tiếng bíp liên tục gây khó chịu và phiền toái.
+
+Tắt hoặc bỏ qua thông báo vì chúng quá nhiều và gây khó chịu? Một thao tác thủ công bị sai ? Những lý do xuất hiện trong các báo cáo sau sự cố (post-mortem: kết quả khám nghiệm tử thi) của nhiều công ty mà tôi có thể nghĩ đến, ngoại trừ kết quả là một cái chết bi thảm thay vì mất mát hàng triệu đô la. Nếu bạn đọc nhiều bài viết về công nghệ, bạn sẽ thấy mọi ví dụ trong báo cáo của Banja đều quen thuộc mặc dù các chi tiết có thể khác nhau.
+
+Phần này kết luận:
+
+>Điều mà những thảm họa này thường tiết lộ là các yếu tố gây ra chúng thường có “thời gian ủ bệnh dài, điển hình là do vi phạm quy tắc, nhiều biểu hiện tích tụ mà không được chú ý và sự thừa nhận rủi ro có hệ thống đã cùng nhau ngăn chặn các biện pháp can thiệp có thể ngăn chặn những kết quả có hại”. Hơn nữa, điều đặc biệt đáng chú ý là nhiều vi phạm và sai phạm có thể kết hợp lại để tạo điều kiện cho thảm họa xảy ra.
+
+Một lần nữa, đây có thể là từ một báo cáo của các sự cố kĩ thuật. Vì thế trong
+phần tiếp theo cũng đáng để nghiên cứu về các lý do vì sao chúng lại xảy ra. Các
+lý do được kể đến là:
+
+### Các quy tắc ngớ ngẩn và không hiệu quả
+
+### Kiến thức không hoàn hảo và không đồng đều
+
+Mọi người không tự động biết như thế nào là tiêu chuẩn, và khi có nhân viên mới
+vào, họ dễ tiếp cận những quy trình lệch lạc đã trở thành tiêu chuẩn.
+
+Julia Evans mô tả cách chúng diễn ra:
+
+Nhân viên mới: CLGT CLGT CLGT CLGT CLGT
+Nhân viên cũ: ờ tụi tao cũng có cân nhắc tới nó
+Nhân viên mới: CLGT CLGT CLgt clgt clg...
+Nhân viên mới thứ 2: CLGT CLGT CLGT CLGT
+Nhân viên mới: tao biết rồi. tụi tao cũng có cân nhắc tới nó
+
+### Tôi phá bỏ quy tắc vì muốn tốt cho bệnh nhân
+
+### Các quy tắc không áp dụng cho tôi/Bạn có thể tin tôi
+
+### Nhân viên ngại lên tiếng
+
+### Cấp trên né tránh hoặc giảm nhẹ tình tiếc của vấn đề
+
+### Các giải pháp
