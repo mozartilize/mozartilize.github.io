@@ -261,3 +261,34 @@ Tại công ty lớn A (CTYA), họ gặp phải vấn đề mà chúng ta đang
 Tại công ty lớn B (CTYB), nhân viên cho rằng có vấn đề ở khâu khen thưởng cho việc làm các tính năng mới phong phú hơn so với làm những công việc nhàm chán nhưng quan trọng. Khi tôi nói chuyện với các quản lý, họ cũng thường đồng ý. Tuy nhiên, những người được thăng chức lại là những người làm ra tính năng mới. Tôi thấy ban quản lý đang nỗ lực thực hiện một số thay đổi về văn hóa và quy trình tại CTYB. Hầu hết, những điều đó đều ở dạng tuyên bố từ những người có những chức danh bóng bẩy. Đối với những điều thực sự quan trọng, họ làm một video và yêu cầu mọi người làm một bài kiểm tra trắc nghiệm sau khi xem video. Hệ quả mà tôi quan sát thấy ở các nhân viên là mọi người nói về sự thiếu kết nối trong công việc quản lý với cuộc sống hàng ngày của họ như thế nào. Tuy nhiên, cũng vì những lý do khiến quá trình bình thường hóa sai lệch xảy ra, thông tin đó dường như không có cách nào đến được với quản lý cấp trên.
 
 Thật buồn cười khi cuối cùng tất cả trở thành vấn đề của sự khuyến khích. Là một ngành công nghiệp, chúng ta dành nhiều thời gian để suy nghĩ về cách khuyến khích người tiêu dùng làm những gì chúng ta muốn. Nhưng sau đó, chúng ta lại thiết lập các hệ thống khuyến khích khuyến khích chúng ta làm những điều sai trái và chúng ta làm như vậy thông qua sự kết hợp giữa thờ và truyền đạo. Trở lại thời kỳ Microsoft còn thống trị, chúng ta đã sao chép quy trình phỏng vấn của họ và đặt những câu hỏi phỏng vấn hóc búa. Bây giờ Google đang đi lên, chúng ta sao chép quy trình phỏng vấn của họ và đặt các câu hỏi về thuật toán. Nếu bạn nhìn xung quanh các công ty mới nổi sau Google, về cơ bản, hầu hết họ đều sao chép hệ thống xếp hạng/phân cấp của Google, với một số sửa đổi nhỏ. Tin tốt là, không giống như nhiều công ty mọi người sao chép trước đây, Google đã suy nghĩ rất nhiều về hầu hết các quy trình của họ và đưa ra các quyết định dựa trên dữ liệu. Tin xấu là chúng chỉ áp dụng đặc biệt cho mỗi Google chứ không khái quát cho tất cả và mọi người vẫn thường còn "sùng bái" rất lâu sau khi chúng không còn được áp dụng ở Google.
+
+Sự lan truyền nãy cũng xảy ra với trong kỹ thuật. Stripe đã xây dựng một message
+queue bằng Mongo, nên chúng ta cũng làm như vậy. Chúng ta thờ cả tổ tiên dòng
+họ.
+
+Báo cáo có những phần nói về cách ngăn chặn quá trình bình thường hóa sự sai
+lệch, tôi đề xuất mọi người nên đọc hết chúng.
+
+  - Để ý đến các tín hiệu nhỏ giọt
+  - Chống lại sự thôi thúc tinh thần lạc quan vô lý
+  - Dạy nhân viên cách cư xử trong những cuộc trò chuyện không thoải mái về mặt cảm xúc
+  - Người vận hành hệ thống cần phát ngôn được sự an toàn
+  - Nhận thức được việc dự đoán và giám sát không bao giờ kết thúc
+
+Hãy phân tích điều đầu tiên, "để ý đến các tín hiệu nhỏ giọt", tương tác với ví
+dụ đã được nói đến, cái "CLGT CLGT" khi nhân viên mới gia nhập.
+
+Nếu một phó giám đốc nói có thứ gì đó đang không ổn, mọi người thường sẽ để ý.
+Đó là một tín hiệu mạnh. Và khi mọi người không để ý, phó giám đốc sẽ biết tác
+động vào đâu để giải quyết vấn đề. Nhưng khi nhân viên mới vào, họ không biết
+cần tác động vào đâu, vào đâu. Họ đưa ra những tín hiệu nhỏ giọt dễ dàng bị phớt
+lờ. Cho đến cái lúc họ có đủ hiểu biết về hệ thống để đưa ra một tín hiệu mạnh
+thì họ đã thích nghi mất rồi.
+
+"Để ý đến các tín hiệu nhỏ giọt" nghe có vẻ là một lời khuyên tốt nhưng làm sao
+cho đúng? Nhũng tín hiệu mạnh ít và hiếm khiến chúng dễ dàng nhận được sự chú
+ý. Tín hiệu nhỏ giọt rất nhiều. Làm cách nào để lọc ra những cái không quan trọng? Và làm cách nào chúng ta có thể khiến toàn bộ nhóm hoặc tổ chức thực sự làm được điều đó? Những loại câu hỏi này không thể được trả lời một cách chung chung; chúng cần phải suy nghĩ thực sự. Nhung chúng ta chủ yếu đặt chúng ở nơi khác. Các công ty khởi nghiệp dành nhiều thời gian để suy nghĩ về sự tăng trưởng và mặc dù tất cả họ đều nói với bạn rằng họ quan tâm rất nhiều đến văn hóa kỹ thuật, nhưng các lựa chọn ưu tiên cho thấy điều ngược lại.
+Dù có vài ngoại lệ, các công ty lớn cũng không có nhiều khác biệt. Tại CTYB, tôi đã xem qua các bảng phân tích cạnh tranh và thấy chúng thật tuyệt vời. Họ xem xét đến từng chi tiết cuối cùng trên hàng trăm sản phẩm để đảm bảo rằng mọi thứ phải tốt nhất cho người dùng của họ, từ việc giới thiệu đến tương tác với các sản phẩm cạnh tranh. Nếu có bất kỳ trang web nào phức tạp hoặc khó hiểu hơn của đối thủ cạnh tranh, mọi người sẽ khó chịu và cố gắng sửa nó. Vịệc đó khá ấn tượng.
+Và sau đó, khi CTYB tuyển nhân viên vào nhóm của tôi, một phần ba trong số họ thiếu ít nhất một trong số thứ như: tài khoản, chỗ ngồi hoặc máy tính, tình trạng đó có thể kéo dài hàng tuần hoặc hàng tháng. Các bảng phân tích cạnh tranh nói về tầm quan trọng của việc tiếp cận ban đầu vì bạn chỉ có một cơ hội để tạo ấn tượng đầu tiên, nhưng nhân viên mới sẽ có ấn tượng thế nào thì công ty không hề quan tâm đến và quy trình bị phá vỡ tràn lan như thế được cho là điều bình thường.
+CTYB thậm chí còn không thể làm ra hồn những điều cơ bản khi có nhân viên mới vào, chưa nói đến những thứ thực sự phức tạp như thích nghi với văn hóa công ty. Điều này có thể hiểu được — các số liệu bên ngoài như mức tăng trưởng hoặc sụt giảm người dùng đều có thể đo lường được nhưng các mục tiêu như cách nhận biết liệu bạn có đang thích nghi không để cho mọi người không bỏ qua các tín hiệu nhỏ giọt thì khó xác định hơn, nhưng điều đó không có nghĩa là chúng kém quan trọng hơn. Mọi người viết rất nhiều về những thứ như sử dụng các ngôn ngữ (lập trình) hay hơn hay các kỹ thuật phức như TDD hay Agile sẽ giúp nhóm của bạn làm việc hiệu quả hơn, nhưng việc có một nền văn hóa kỹ thuật vững chắc sẽ mang lại sức mạnh lớn hơn rất nhiều.
+
