@@ -3,11 +3,16 @@ layout: post
 title: "Normalization of Deviance"
 ---
 
+Bài viết được dịch từ [Sự bình thường hóa của sự lệch lạc](https://danluu.com/wat/)
+---
+
 Có bao giờ bạn đề cập đến một chuyện hết sức bình thường đối với bạn
 nhưng khiến mọi người ngạc nhiên chưa? Tôi hay bị như vậy khi có những chuyện
 đồng nghiệp nào của tôi cũng nghĩ đó là bình thường. Vì lý do nào đó, khuôn mặt
-của người đang nói chuyện với tôi đang cười chuyển dần sang kinh hãi.
+của người đang nói chuyện với tôi đang cười chuyển dần sang kinh ngạc.
 Dưới đây là một vài ví dụ tiêu biểu.
+
+<!-- more -->
 
 Có một công ty mà tôi nghĩ là nơi tốt nhất mình từng làm việc, kết hợp
 giữa Valve và Netflix. Mọi người rất tuyệt vời và bạn được tự do làm những điều
@@ -62,20 +67,20 @@ sau khi được hỏi những câu hỏi như "bạn có kinh nghiệm về thu
 chỉ code thôi?". Tôi đã nghĩ rằng lời giới thiệu với đánh giá cao của tôi sẽ ngăn chặn
 điều đó, nhưng thực tế không phải vậy.
 
-Có một công ty nơi mình tôi làm việc của bốn người với ngân sách hàng năm cả
+Có một công ty nơi tôi làm dự án có bốn người với ngân sách hàng năm cả
 trăm triệu đô la và tác động hàng tỷ đô la mỗi năm, nhưng khi được yêu cầu về
 những thứ giá trị khoảng vài trăm đô phải mất hàng tháng trời để xử lý hoặc bị
 từ chối.
 
-Bạn có thể thắc mắc phải chăng tôi vừa làm việc ở những nơi có tình trạng lộn xộn
-một cách bất thường không. Đúng vậy, các công ty đó thường được coi là rất ổn và
+Bạn có thể thắc mắc phải chăng tôi đã làm việc ở những nơi có tình trạng lộn xộn
+một cách bất thường hay sao. Đúng vậy, các công ty đó được coi là rất ổn và
 hai trong số đó được coi là những nơi tốt nhất để làm việc, nhưng cũng có thể
 những nơi đó được đánh giá quá cao. Nhưng tôi cũng có trải nghiệm tương tự khi
 nghe những câu chuyện về cách các công ty khác vận hành, thậm chí ở những nơi có
 tiếng xuất sắc về chuyên môn kỹ thuật, ngoại trừ việc tôi là người cảm thấy sốc
 còn bạn của tôi cho rằng chuyện của họ là bình thường.
 
-Có những công ty sử dụng flaky, bao gồm phần lớn các công ty dùng Python mới nổi
+Có những công ty sử dụng [@flaky](https://github.com/box/flaky), bao gồm phần lớn các công ty dùng Python mới nổi
 ở thung lũng Silicon. Nếu bạn không biết nó là gì, thì đây là một thư
 viện để bạn đánh dấu những kiểm thử (tests) chạy lúc đạt (pass) lúc không (fail).
 Khi tôi hỏi một số đồng nghiệp về thư viện này, học đều đoán rằng nó sẽ chạy những kiểm
@@ -85,7 +90,7 @@ thực tế né được dùng để chạy kiểm thử nhiều lần và đán
 lần chạy đạt. Công ty tạo ra flaky là một công ty cung cấp sản phẩm về lưu trữ,
 và nó được sử dụng rộng rãi bởi các đối thủ cạnh tranh.
 
-Có một công ty nổi tiếng vì có hệ thống vận hành với độ tin cậy hai số 9 trong lần
+Có một công ty nổi tiếng vì có hệ thống vận hành với độ tin cậy [hai số 9](https://en.wikipedia.org/wiki/High_availability#Percentage_calculation) trong lần
 kiểm tra trước của tôi, vì những lý do hoàn toàn có thể dự đoán được từ các quy trình
 kỹ thuật xuất sắc của họ. Đây là điều không cần phải được công khai vì có nhiều
 công ty đạt được điều đó. Ở đây tôi không nói về những công ty đang cố gắng trở thành
@@ -160,7 +165,7 @@ cơ khí, kỹ thuật hàng không vũ trụ và kỹ thuật dân dụng, như
 
 Có thể học hỏi từ sai lầm của người khác thay vì tự mình mắc phải mọi lỗi lầm không?
 Với tình trạng của ngành phần mềm thì nghe có vẻ khó xảy ra, nhưng hãy thử xem.
-John Banja có một báo cáo tóm tắt rất hay về quá trình bình thường hóa của sự lệch
+John Banja có [một báo cáo](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2821100/) tóm tắt rất hay về quá trình bình thường hóa của sự lệch
 lạc trong y tế, với những bài học mà chúng ta có thể áp dụng vào ngành phần mềm. Một
 điều cần lưu ý là, vì Banja quan tâm đến kết quả của bệnh nhân, nên có sự tương đồng
 gần gũi với các phương thức thất bại của devops, nhưng quá trình bình thường hóa của
@@ -175,7 +180,7 @@ Tắt hoặc bỏ qua thông báo vì chúng quá nhiều và gây khó chịu? 
 
 Phần này kết luận:
 
->Điều mà những thảm họa này thường tiết lộ là các yếu tố gây ra chúng thường có “thời gian ủ bệnh dài, điển hình là do vi phạm quy tắc, nhiều biểu hiện tích tụ mà không được chú ý và sự thừa nhận rủi ro có hệ thống đã cùng nhau ngăn chặn các biện pháp can thiệp có thể ngăn chặn những kết quả có hại”. Hơn nữa, điều đặc biệt đáng chú ý là nhiều vi phạm và sai phạm có thể kết hợp lại để tạo điều kiện cho thảm họa xảy ra.
+>Điều mà những thảm họa này thường tiết lộ là các yếu tố gây ra chúng thường có “thời gian ủ bệnh dài, điển hình là do vi phạm quy tắc, nhiều biểu hiện tích tụ mà không được chú ý và sự thừa nhận rủi ro có hệ thống đã cùng nhau ngăn chặn các biện pháp can thiệp giúp phòng tránh những kết quả có hại”. Hơn nữa, điều đặc biệt đáng chú ý là nhiều vi phạm và sai phạm có thể kết hợp lại để tạo điều kiện cho thảm họa xảy ra.
 
 Một lần nữa, đây có thể là từ một báo cáo của các sự cố kĩ thuật. Vì thế trong
 phần tiếp theo cũng đáng để nghiên cứu về các lý do vì sao chúng lại xảy ra. Các
@@ -188,18 +193,19 @@ Một ví dụ trong báo cáo là về việc cấp thuốc cho trẻ sơ sinh.
 Điều đó nghe thật quen thuộc. Biết bao nhiêu sự cố kỹ thuật bắt đầu với việc "ai
 đó bỏ qua một số bước vì chúng không hiệu quả", ví dụ như "lập trình viên đưa
 thiết lập sai hay đoạn code sai lên server vì họ chắc chắn rằng không có gì sẽ
-xảy ra và bỏ qua việc kiểm thử"? Sự cố nổi tiếng của Azure (điện toán đám mây của
+xảy ra và bỏ qua việc kiểm thử"? [Sự cố nổi tiếng của Azure](https://azure.microsoft.com/en-us/blog/final-root-cause-analysis-and-improvement-areas-nov-18-azure-storage-service-interruption/) (điện toán đám mây của
 Microsoft) vào tháng 11 năm 2014 xảy ra do vậy. Cũng trong khoảng thời gian đó,
 một lập trình viên từ một trong số các đối thủ cạnh tranh của Azure bỏ qua quy
 định không được phép đẩy lên các thiết lập chưa đạt kiểm thử vì họ biết rằng các
-thiết lập không thể sai được. Nhưng khi quá trình phát hành thử nghiệm thất bại,
-họ lại tiếp tục bỏ qua quy định không được này và phát hành lên môi trường giả lập
+thiết lập không thể sai được. Nhưng khi quá trình phát hành thử nghiệm (canary deployment) thất bại,
+họ lại tiếp tục bỏ qua quy định này và phát hành lên môi trường dùng thử
+(staging environment)
 vì họ biết rằng thiết lập không thể sai được cho nên sai sót phải đến từ chỗ khác.
 Báo cáo chỉ ra các thiết lập chính xác về mặt kỹ thuật nhưng nó gián tiếp thực thi
 phần chương trình bị lỗi; thật may mắn khi lỗi tiềm ẩn mà thiết lập đó gây ra
 không nghiêm trọng như lỗi của Azure.
 
-Con người rất kém trong việc tính toán mức độ ảnh hưởng, vì vậy chúng ta đưa ra các quy tắc rõ ràng về thời điểm an toàn để phát hành. Nhưng điều tương tự khiến chúng ta khó có thể tính toán về thời điểm an toàn để phát hành cũng khiến các quy tắc có vẻ trở nên ngu ngốc và kém hiệu quả.
+Con người rất kém trong việc tính toán mức độ ảnh hưởng, vì vậy chúng ta đưa ra các quy tắc rõ ràng về thời điểm an toàn để phát hành. Nhưng điều tương tự khiến chúng ta khó có thể tính toán đúng thời điểm an toàn để phát hành cũng khiến các quy tắc có vẻ trở nên ngu ngốc và kém hiệu quả.
 
 ### Kiến thức không hoàn hảo và không đồng đều
 
@@ -218,27 +224,27 @@ Nhân viên mới thứ 2: CLGT CLGT CLGT CLGT
 
 Nhân viên mới: tao biết rồi. tụi tao cũng có cân nhắc tới nó
 
-Điều thực sự nguy hiểm ở đây là mọi người dễ tin vào cái ý tưởng "CLGT" kia và họ có thể truyền bá nó đi nơi khác trong suốt sự nghiệp của mình. Một lần, sau khi thực hiện một số công việc trong một dự án nguồn mở thường xuyên bị hỏng và được thông báo rằng việc có một bản build bị hỏng là điều bình thường và họ đang làm tốt hơn nhiều người khác, tôi đã đối chiếu các số liệu và nhận thấy rằng về cơ bản thì dự án đó là tệ nhất, và đã đưa ra ý tưởng rằng có thể có một tiến trình build gần như luôn thành công với nỗ lực tương đối thấp. Nhận xét phổ biến nhất mà tôi nhận được là: "Chà, anh chàng đó chắc phải làm việc với những lập trình viên siêu sao. Nhưng hãy thành thực đi. Tất cả chúng ta đều có thể làm cho tiến trình build bị hỏng ít nhất vài lần một tuần", như thể việc chạy kiểm thử (hoặc thậm chí là biên dịch) trước khi thay đổi code cần phải có siêu năng lực vậy. Nhưng một khi mọi người bị thuyết phục rằng một số sai lệch là bình thường, họ thường thực sự đầu tư vào ý tưởng đó.
+Điều thực sự nguy hiểm ở đây là mọi người dễ tin vào cái ý tưởng "CLGT" kia và họ có thể truyền bá nó đi nơi khác trong suốt sự nghiệp của mình. Một lần, sau khi thực hiện một số công việc trong một dự án nguồn mở thường xuyên bị hỏng và được thông báo rằng việc có một bản build bị hỏng là điều bình thường và họ đang làm tốt hơn nhiều người khác, tôi đã đối chiếu các số liệu và nhận thấy rằng về cơ bản thì dự án đó là tệ nhất, và đã đưa ra ý tưởng rằng có thể có một tiến trình build gần như luôn thành công với nỗ lực tương đối thấp. Nhận xét phổ biến nhất mà tôi nhận được là: "Chà, anh chàng đó chắc phải làm việc với những lập trình viên siêu sao. Nhưng hãy thành thực đi. Tất cả chúng ta đều có thể làm cho tiến trình build bị hỏng ít nhất vài lần một tuần", như thể việc chạy kiểm thử (hoặc thậm chí là biên dịch) trước khi merge code cần phải có siêu năng lực vậy. Nhưng một khi mọi người bị thuyết phục rằng những cái (lệch lạc) đó là bình thường, họ thường thực sự đầu tư vào ý tưởng đó.
 
 ### Tôi phá bỏ quy tắc vì muốn tốt cho bệnh nhân
 
-Ví dụ trong báo cápo là về một người đã vi phạm quy định phải đeo găng tay khi tìm tĩnh mạch. Lý do của họ là việc đeo găng tay khiến việc tìm tĩnh mạch trở nên khó khăn hơn, điều này có thể dẫn đến việc họ phải dùng kim đâm vào em bé nhiều lần. Thật khó để tranh luận chống lại điều đó. Không ai muốn gây thêm đau đớn cho em bé!
+Ví dụ trong báo cáo là về một người đã vi phạm quy định phải đeo găng tay khi tìm tĩnh mạch. Lý do của họ là việc đeo găng tay khiến việc tìm tĩnh mạch trở nên khó khăn hơn, điều này có thể dẫn đến việc họ phải dùng kim đâm vào em bé nhiều lần. Thật khó để tranh luận chống lại điều đó. Không ai muốn gây thêm đau đớn cho em bé!
 
-Sự cố tồi tệ thứ hai mà tôi có thể nghĩ đến xảy ra khi có người nhận thấy rằng cơ sở dữ liệu đang bị chậm. Họ đã đưa ra bản sửa lỗi để ngăn sự cố lan rộng, họ đã bỏ qua quy tắc rằng bạn nên triển khai chậm rãi và phù hợp theo từng giai đoạn. Thay vào đó, họ đã đưa ra bản sửa lỗi cho tất cả các server. Thật khó để tranh luận chống lại điều đó. Không ai muốn khách hàng của mình có trải nghiệm bị gián đoạn cả! Thật không may, bản sửa lỗi đã gây ra sự cố ngừng hoạt động cả hệ thống.
+Một sự cố tồi tệ mà tôi có thể nghĩ đến xảy ra khi có người nhận thấy rằng cơ sở dữ liệu đang bị chậm. Họ đã đưa ra bản sửa lỗi để ngăn sự cố lan rộng, họ đã bỏ qua quy tắc rằng bạn nên triển khai chậm rãi và phù hợp theo từng giai đoạn. Thay vào đó, họ đã đưa ra bản sửa lỗi cho tất cả các server. Thật khó để tranh luận chống lại điều đó. Không ai muốn khách hàng của mình có trải nghiệm bị gián đoạn cả! Thật không may, bản sửa lỗi đã gây ra sự cố ngừng hoạt động cả hệ thống.
 
 ### Các quy tắc không áp dụng cho tôi/Bạn có thể tin tôi
 
->hầu hết con người đều tự nhận mình là người tốt và tử tế, đến mức họ có thể hiểu nhiều hành vi vi phạm quy tắc của họ là những phản ứng hoàn toàn hợp lý và có thể chấp nhận được về mặt đạo đức đối với các tình huống có vấn đề. Họ hiểu rằng mình không làm gì sai, sẽ tức giận và thường bảo vệ mình một cách quyết liệt khi gặp phải bằng chứng ngược lại.
+>hầu hết mọi người đều tự nhận mình là người tốt và tử tế, đến mức họ có thể hiểu nhiều hành vi vi phạm quy tắc của họ là những phản ứng hoàn toàn hợp lý và có thể chấp nhận được về mặt đạo đức đối với các tình huống nan giải. Họ hiểu rằng mình không làm gì sai, sẽ tức giận và thường bảo vệ mình một cách quyết liệt khi gặp phải bằng chứng ngược lại.
 
 Khi các công ty phát triển, cuối cùng họ phải áp đặt biện pháp bảo mật ngăn cản mọi nhân viên về cơ bản có thể truy cập mọi thứ. Và tại hầu hết các công ty, khi điều đó xảy ra, một số người thực sự khó chịu. “Anh không tin tưởng tôi sao? Nếu bạn tin tưởng tôi, tại sao bạn lại thu hồi quyền truy cập của tôi vào X, Y, Z?
 
-Facebook từng nổi tiếng vì cho phép tất cả nhân viên truy cập hồ sơ của mọi người trong một thời gian dài và thậm chí bạn có thể tìm thấy các bình luận trên HN cho biết rằng một số nhà tuyển dụng sẽ đề cập rõ ràng đến điều đó như một đặc quyền khi làm việc cho Facebook. Và tôi có thể nghĩ đến nhiều hơn một công ty, nơi mọi người vẫn có quyền truy cập vào mọi thứ, ngay cả sau một hoặc hai sự cố bảo mật nghiêm trọng. Thật khó để có được quyền lực để hạn chế khả năng tiếp cận của mọi người với những gì họ tin rằng họ cần hoặc có quyền được biết. Rất nhiều công ty khởi nghiệp thời thượng có các giá trị cốt lõi như “niềm tin” và “minh bạch”, điều này gây khó khăn cho việc tranh luận về khả năng tiếp cận tất cả mọi thứ.
+Facebook từng nổi tiếng vì [cho phép tất cả nhân viên truy cập trang cá nhân của người dùng](http://www.wsj.com/articles/SB10001424052702304898704577478483529665936) trong một thời gian dài và thậm chí bạn có thể tìm thấy các bình luận trên HN cho biết rằng một số nhà tuyển dụng sẽ đề cập rõ ràng đến điều đó như một đặc quyền khi làm việc cho Facebook. Và tôi có thể nghĩ đến nhiều hơn một công ty, nơi mọi người vẫn có quyền truy cập vào mọi thứ, ngay cả sau một hoặc hai sự cố bảo mật nghiêm trọng. Thật khó để có được quyền lực để hạn chế khả năng tiếp cận của mọi người với những gì họ tin rằng họ cần hoặc có quyền được biết. Rất nhiều công ty khởi nghiệp thời thượng có các giá trị cốt lõi như “niềm tin” và “minh bạch”, điều này gây khó khăn cho việc tranh luận về khả năng tiếp cận tất cả mọi thứ.
 
 ### Nhân viên ngại lên tiếng
 
 Có những người mà tôi đơn giản là không góp ý cho họ vì tôi không thể biết liệu họ có chấp nhận điều đó hay không, và một khi bạn đã nói điều gì đó thì không thể rút lại. Trong báo cáo, tác giả đưa ra ví dụ về một bác sĩ có chữ viết kém, tỏ ra ác ý khi mọi người yêu cầu ông làm rõ những gì ông đã viết. Kết quả là mọi người đoán thay vì hỏi.
 
-Trong hầu hết các nền văn hóa công ty, mọi người cảm thấy kỳ lạ khi đưa ra góp ý. Hẳn ai cũng có những câu chuyện về một dự án kéo dài hàng tháng hoặc hàng năm mà lẽ ra nó phải bị chấm dứt nhưng không ai sẵn sàng đưa ra góp ý rõ ràng cả. Đây là một vấn đề ngay cả khi các công ty không khuyến khích sự hèn hạ và khuyến khích mọi người góp ý: những nơi có văn hóa tử tế dường như có nhiều vấn đề xung quanh việc phát biểu ý kiến ngang với các nền văn hóa hèn hạ, nếu không muốn nói là nhiều hơn. Ở một số nơi, người ta ngại lên tiếng vì sẽ bị ai đó ác ý tấn công. Ở những nơi khác, họ sợ họ sẽ bị coi là hèn hạ. Đó là một vấn đề nan giải.
+Trong hầu hết các nền văn hóa công ty, mọi người cảm thấy kỳ lạ khi đưa ra góp ý. Hẳn ai cũng có những câu chuyện về một dự án kéo dài hàng tháng hoặc hàng năm mà lẽ ra nó phải bị chấm dứt nhưng không ai sẵn sàng đưa ra góp ý rõ ràng cả. Đây là một vấn đề ngay cả khi các công ty không khuyến khích ý xấu và khuyến khích mọi người góp ý: những nơi có văn hóa tử tế dường như có nhiều vấn đề xung quanh việc phát biểu ý kiến ngang với các công ty nền văn hóa ác ý, nếu không muốn nói là nhiều hơn. Ở một số nơi, người ta ngại lên tiếng vì sẽ bị ai đó ác ý tấn công. Ở những nơi khác, họ sợ họ sẽ bị coi là hèn hạ. Đó là một vấn đề nan giải.
 
 ### Cấp trên né tránh hoặc giảm nhẹ tình tiếc của vấn đề
 
@@ -258,7 +264,7 @@ Các công ty nhỏ thì khá dễ dàng. Khi tôi làm việc tại một công
 
 Tại công ty lớn A (CTYA), họ gặp phải vấn đề mà chúng ta đang thảo luận và nhiệm vụ được đưa ra là khen thưởng tốt hơn những người đã thực hiện những công việc quan trọng nhưng ít được chú ý. Có quá nhiều nhân viên để người quản lý trực tiếp đưa ra mọi quyết định về lương thưởng và thăng chức, nhưng họ có thể xem xét dữ liệu khảo sát, quyết định kiểm tra đột xuất và đưa ra phản hồi cho đến khi quy trình được tiêu chuẩn hóa. Theo tôi thì công ty đó chưa bao giờ đạt được mức (lương) cân bằng giữa công việc bảo trì nhàm chán và các dự án mới, nhưng cũng đủ để những người muốn đảm bảo mọi thứ hoạt động chính xác không phải gây tổn hại đáng kể đến sự nghiệp của họ khi thực hiện điều đó.
 
-Tại công ty lớn B (CTYB), nhân viên cho rằng có vấn đề ở khâu khen thưởng cho việc làm các tính năng mới phong phú hơn so với làm những công việc nhàm chán nhưng quan trọng. Khi tôi nói chuyện với các quản lý, họ cũng thường đồng ý. Tuy nhiên, những người được thăng chức lại là những người làm ra tính năng mới. Tôi thấy ban quản lý đang nỗ lực thực hiện một số thay đổi về văn hóa và quy trình tại CTYB. Hầu hết, những điều đó đều ở dạng tuyên bố từ những người có những chức danh bóng bẩy. Đối với những điều thực sự quan trọng, họ làm một video và yêu cầu mọi người làm một bài kiểm tra trắc nghiệm sau khi xem video. Hệ quả mà tôi quan sát thấy ở các nhân viên là mọi người nói về sự thiếu kết nối trong công việc quản lý với cuộc sống hàng ngày của họ như thế nào. Tuy nhiên, cũng vì những lý do khiến quá trình bình thường hóa sai lệch xảy ra, thông tin đó dường như không có cách nào đến được với quản lý cấp trên.
+Tại công ty lớn B (CTYB), nhân viên cho rằng có vấn đề ở khâu khen thưởng cho việc làm các tính năng mới phong phú hơn so với làm những công việc nhàm chán nhưng quan trọng. Khi tôi nói chuyện với các quản lý, họ cũng thường đồng ý. Tuy nhiên, những người được thăng chức lại là những người làm ra tính năng mới. Tôi thấy ban quản lý đang nỗ lực thực hiện một số thay đổi về văn hóa và quy trình tại CTYB. Hầu hết, những điều đó đều ở dạng tuyên bố từ những người có những chức danh bóng bẩy. Đối với những điều thực sự quan trọng, họ làm một video và yêu cầu mọi người làm một bài kiểm tra trắc nghiệm sau khi xem nó. Hệ quả mà tôi quan sát thấy ở các nhân viên là mọi người nói về sự thiếu kết nối trong công việc quản lý với cuộc sống hàng ngày của họ như thế nào. Tuy nhiên, cũng vì những lý do khiến quá trình bình thường hóa của sự lệch lạc xảy ra, thông tin đó dường như không có cách nào đến được với quản lý cấp trên.
 
 Thật buồn cười khi cuối cùng tất cả trở thành vấn đề của sự khuyến khích. Là một ngành công nghiệp, chúng ta dành nhiều thời gian để suy nghĩ về cách khuyến khích người tiêu dùng làm những gì chúng ta muốn. Nhưng sau đó, chúng ta lại thiết lập các hệ thống khuyến khích khuyến khích chúng ta làm những điều sai trái và chúng ta làm như vậy thông qua sự kết hợp giữa thờ và truyền đạo. Trở lại thời kỳ Microsoft còn thống trị, chúng ta đã sao chép quy trình phỏng vấn của họ và đặt những câu hỏi phỏng vấn hóc búa. Bây giờ Google đang đi lên, chúng ta sao chép quy trình phỏng vấn của họ và đặt các câu hỏi về thuật toán. Nếu bạn nhìn xung quanh các công ty mới nổi sau Google, về cơ bản, hầu hết họ đều sao chép hệ thống xếp hạng/phân cấp của Google, với một số sửa đổi nhỏ. Tin tốt là, không giống như nhiều công ty mọi người sao chép trước đây, Google đã suy nghĩ rất nhiều về hầu hết các quy trình của họ và đưa ra các quyết định dựa trên dữ liệu. Tin xấu là chúng chỉ áp dụng đặc biệt cho mỗi Google chứ không khái quát cho tất cả và mọi người vẫn thường còn "sùng bái" rất lâu sau khi chúng không còn được áp dụng ở Google.
 
@@ -281,14 +287,14 @@ dụ đã được nói đến, cái "CLGT CLGT" khi nhân viên mới gia nhậ
 Nếu một phó giám đốc nói có thứ gì đó đang không ổn, mọi người thường sẽ để ý.
 Đó là một tín hiệu mạnh. Và khi mọi người không để ý, phó giám đốc sẽ biết tác
 động vào đâu để giải quyết vấn đề. Nhưng khi nhân viên mới vào, họ không biết
-cần tác động vào đâu, vào đâu. Họ đưa ra những tín hiệu nhỏ giọt dễ dàng bị phớt
+cần tác động vào ai, vào đâu. Họ đưa ra những tín hiệu nhỏ giọt dễ dàng bị phớt
 lờ. Cho đến cái lúc họ có đủ hiểu biết về hệ thống để đưa ra một tín hiệu mạnh
 thì họ đã thích nghi mất rồi.
 
 "Để ý đến các tín hiệu nhỏ giọt" nghe có vẻ là một lời khuyên tốt nhưng làm sao
-cho đúng? Nhũng tín hiệu mạnh ít và hiếm khiến chúng dễ dàng nhận được sự chú
+cho đúng? Những tín hiệu mạnh ít và hiếm khiến chúng dễ dàng nhận được sự chú
 ý. Tín hiệu nhỏ giọt rất nhiều. Làm cách nào để lọc ra những cái không quan trọng? Và làm cách nào chúng ta có thể khiến toàn bộ nhóm hoặc tổ chức thực sự làm được điều đó? Những loại câu hỏi này không thể được trả lời một cách chung chung; chúng cần phải suy nghĩ thực sự. Nhung chúng ta chủ yếu đặt chúng ở nơi khác. Các công ty khởi nghiệp dành nhiều thời gian để suy nghĩ về sự tăng trưởng và mặc dù tất cả họ đều nói với bạn rằng họ quan tâm rất nhiều đến văn hóa kỹ thuật, nhưng các lựa chọn ưu tiên cho thấy điều ngược lại.
-Dù có vài ngoại lệ, các công ty lớn cũng không có nhiều khác biệt. Tại CTYB, tôi đã xem qua các bảng phân tích cạnh tranh và thấy chúng thật tuyệt vời. Họ xem xét đến từng chi tiết cuối cùng trên hàng trăm sản phẩm để đảm bảo rằng mọi thứ phải tốt nhất cho người dùng của họ, từ việc giới thiệu đến tương tác với các sản phẩm cạnh tranh. Nếu có bất kỳ trang web nào phức tạp hoặc khó hiểu hơn của đối thủ cạnh tranh, mọi người sẽ khó chịu và cố gắng sửa nó. Vịệc đó khá ấn tượng.
-Và sau đó, khi CTYB tuyển nhân viên vào nhóm của tôi, một phần ba trong số họ thiếu ít nhất một trong số thứ như: tài khoản, chỗ ngồi hoặc máy tính, tình trạng đó có thể kéo dài hàng tuần hoặc hàng tháng. Các bảng phân tích cạnh tranh nói về tầm quan trọng của việc tiếp cận ban đầu vì bạn chỉ có một cơ hội để tạo ấn tượng đầu tiên, nhưng nhân viên mới sẽ có ấn tượng thế nào thì công ty không hề quan tâm đến và quy trình bị phá vỡ tràn lan như thế được cho là điều bình thường.
-CTYB thậm chí còn không thể làm ra hồn những điều cơ bản khi có nhân viên mới vào, chưa nói đến những thứ thực sự phức tạp như thích nghi với văn hóa công ty. Điều này có thể hiểu được — các số liệu bên ngoài như mức tăng trưởng hoặc sụt giảm người dùng đều có thể đo lường được nhưng các mục tiêu như cách nhận biết liệu bạn có đang thích nghi không để cho mọi người không bỏ qua các tín hiệu nhỏ giọt thì khó xác định hơn, nhưng điều đó không có nghĩa là chúng kém quan trọng hơn. Mọi người viết rất nhiều về những thứ như sử dụng các ngôn ngữ (lập trình) hay hơn hay các kỹ thuật phức như TDD hay Agile sẽ giúp nhóm của bạn làm việc hiệu quả hơn, nhưng việc có một nền văn hóa kỹ thuật vững chắc sẽ mang lại sức mạnh lớn hơn rất nhiều.
+Dù có vài ngoại lệ, các công ty lớn cũng không có nhiều khác biệt. Tại CTYB, tôi đã xem qua các bảng phân tích cạnh tranh và thấy chúng thật tuyệt vời. Họ xem xét đến từng chi tiết cuối cùng trên hàng trăm sản phẩm để đảm bảo rằng mọi thứ phải tốt nhất cho người dùng của họ, từ việc giới thiệu đến tương tác với các sản phẩm cạnh tranh. Nếu có bất kỳ trang web nào phức tạp hoặc khó hiểu hơn của đối thủ cạnh tranh, mọi người sẽ khó chịu và cố gắng sửa nó. Việc đó khá ấn tượng.
+Và sau đó, khi CTYB tuyển nhân viên vào nhóm của tôi, một phần ba trong số họ thiếu ít nhất một trong số thứ như: tài khoản, chỗ ngồi hoặc máy tính, tình trạng đó có thể kéo dài hàng tuần hoặc hàng tháng. Các bảng phân tích cạnh tranh nói về tầm quan trọng của việc tiếp cận ban đầu vì bạn chỉ có một cơ hội để tạo ấn tượng đầu tiên, nhưng nhân viên mới sẽ có ấn tượng thế nào thì công ty không hề quan tâm đến họ và quy trình bị phá vỡ tràn lan như thế được cho là điều bình thường.
+CTYB thậm chí còn không thể làm ra hồn những điều cơ bản khi có nhân viên mới vào, chưa nói đến những thứ thực sự phức tạp như thích nghi với văn hóa công ty. Điều này có thể hiểu được — các số liệu bên ngoài như mức tăng trưởng hoặc sụt giảm người dùng đều có thể đo lường được nhưng các mục tiêu như cách nhận biết liệu bạn có đang thích nghi không để cho mọi người không bỏ qua các tín hiệu nhỏ giọt thì khó xác định hơn, nhưng điều đó không có nghĩa là chúng kém quan trọng hơn. Mọi người viết rất nhiều về những thứ như sử dụng các ngôn ngữ (lập trình) hay hơn hay các kỹ thuật như TDD hay Agile sẽ giúp nhóm của bạn làm việc hiệu quả hơn, nhưng việc có một nền văn hóa kỹ thuật vững chắc sẽ mang lại sức mạnh lớn hơn rất nhiều.
 
