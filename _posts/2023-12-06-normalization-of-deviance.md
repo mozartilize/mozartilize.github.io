@@ -3,7 +3,7 @@ layout: post
 title: "Normalization of Deviance"
 ---
 
-Bài viết được dịch từ [Sự bình thường hóa của sự lệch lạc](https://danluu.com/wat/)
+Bài viết được dịch từ [Quá trình bình thường hóa của sự lệch lạc](https://danluu.com/wat/)
 ---
 
 Có bao giờ bạn đề cập đến một chuyện hết sức bình thường đối với bạn
