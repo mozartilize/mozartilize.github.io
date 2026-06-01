@@ -20,7 +20,7 @@ của bộ gõ trên Linux. Bài viết rất hay và tôi vẫn thường mở 
 sau khi cau mày gõ một nội dung trên trình duyệt chờ nhấn space cho
 suggestion/history hiện lên để còn truy cập nhanh vào đường link mình muốn.
 
----
+<!-- more -->
 
 Không chỉ dừng lại ở ibus-unikey, tôi từng thử fcitx, nimf hay ibus-bamboo.
 Nhưng những vấn đề xưa cũ vẫn ở đó, tất cả hoạt động không đồng bộ,
